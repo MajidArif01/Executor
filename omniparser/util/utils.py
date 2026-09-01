@@ -14,7 +14,7 @@ from PIL import Image
 from torchvision.ops import box_convert
 from torchvision.transforms import ToPILImage
 
-from util.box_annotator import BoxAnnotator
+from .box_annotator import BoxAnnotator
 
 _easyocr_reader = None
 _paddle_ocr = None
@@ -73,9 +73,11 @@ def _parse_paddle_ocr_result(result, text_threshold):
     return coord, text
 
 
-def get_caption_model_processor(model_name="florence2", model_name_or_path="weights/icon_caption_florence", device=None):
+def get_caption_model_processor(model_name="florence2", model_name_or_path=None, device=None):
     from transformers import AutoProcessor, AutoModelForCausalLM
 
+    if model_name_or_path is None:
+        model_name_or_path = str(Path(__file__).resolve().parents[1] / "weights/icon_caption_florence")
     if not device:
         device = "cuda" if torch.cuda.is_available() else "cpu"
     dtype = torch.float32 if device == 'cpu' else torch.float16
@@ -85,7 +87,7 @@ def get_caption_model_processor(model_name="florence2", model_name_or_path="weig
 
 
 def get_yolo_model(model_path=None, device=None):
-    from util.yolov9 import YOLOv9Detector
+    from .yolov9 import YOLOv9Detector
 
     if model_path is None:
         local_model_path = Path(__file__).resolve().parents[1] / "weights/icon_detect_v3/model.pt"

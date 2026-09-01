@@ -8,12 +8,12 @@ import io
 
 
 import base64, os
-from util.utils import check_ocr_box, get_yolo_model, get_caption_model_processor, get_som_labeled_img
+from omniparser.util.utils import check_ocr_box, get_yolo_model, get_caption_model_processor, get_som_labeled_img
 import torch
 from PIL import Image
 
 yolo_model = get_yolo_model()
-caption_model_processor = get_caption_model_processor(model_name="florence2", model_name_or_path="weights/icon_caption_florence")
+caption_model_processor = get_caption_model_processor()
 
 MARKDOWN = """
 # OmniParser for Pure Vision Based General GUI Agent 🔥
