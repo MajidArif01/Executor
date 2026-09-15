@@ -1,5 +1,6 @@
 import base64
 import io
+import json
 import time
 from pathlib import Path
 from typing import List, Union
@@ -18,6 +19,23 @@ from .box_annotator import BoxAnnotator
 
 _easyocr_reader = None
 _paddle_ocr = None
+_rapid_ocr = {}
+
+# RapidOCR filters by *recognition* confidence, unlike EasyOCR's `text_threshold`
+# (a detection heatmap cutoff). Forwarding EasyOCR's 0.9 here would drop most
+# valid UI text, so the rapidocr path uses its own threshold.
+#
+# These are only the fallback defaults for callers that pass no params of their
+# own; parse.py drives the engine from its RAPIDOCR_PARAMS config block.
+# Deliberately no Det/Rec.lang_type here: at the default PP-OCRv6 it is
+# validated but ignored (the multilingual model is always used), so setting it
+# would only mislead. It selects a real per-language model at v4/v5 only.
+RAPIDOCR_TEXT_SCORE = 0.5
+RAPIDOCR_BOX_THRESH = 0.3
+RAPIDOCR_DEFAULT_PARAMS = {
+    'Global.text_score': RAPIDOCR_TEXT_SCORE,
+    'Det.box_thresh': RAPIDOCR_BOX_THRESH,
+}
 
 
 def get_easyocr_reader():
@@ -37,6 +55,82 @@ def get_paddle_ocr():
             use_textline_orientation=False,
         )
     return _paddle_ocr
+
+
+def _coerce_rapid_ocr_params(params):
+    """Turn plain-string params into the Enums RapidOCR demands.
+
+    RapidOCR rejects strings for engine_type / model_type / ocr_version /
+    task_type (parse_parameters.ParseParams.update_batch), but config files
+    are far more readable with strings, so callers write e.g.
+    "Rec.model_type": "small" and the conversion happens here. Values that
+    are already Enums pass through untouched.
+    """
+    from enum import Enum
+
+    from rapidocr.utils.typings import EngineType, ModelType, OCRVersion, TaskType
+
+    enum_types = {
+        'engine_type': EngineType,
+        'model_type': ModelType,
+        'ocr_version': OCRVersion,
+        'task_type': TaskType,
+    }
+
+    coerced = {}
+    for key, value in params.items():
+        enum_type = enum_types.get(key.split('.')[-1])
+        if enum_type is not None and not isinstance(value, Enum):
+            try:
+                value = enum_type(value)
+            except ValueError:
+                valid = [m.value for m in enum_type]
+                raise ValueError(
+                    f'Invalid RapidOCR {key}={value!r}; expected one of {valid}'
+                ) from None
+        coerced[key] = value
+    return coerced
+
+
+def get_rapid_ocr(params=None):
+    """Build (and cache) a RapidOCR engine for one parameter set.
+
+    ``params`` keys go straight to ``RapidOCR(params=...)``, so anything in
+    rapidocr's config.yaml is settable -- including model selection via
+    ``Det/Rec.ocr_version`` + ``model_type`` (+ ``lang_type`` at v4/v5).
+    Each distinct parameter set gets its own cached engine, so changing the
+    model never hands back an engine built for the previous one.
+    """
+    # Imported lazily (unlike easyocr/paddleocr above) so that a missing
+    # rapidocr install cannot break this whole module.
+    from rapidocr import RapidOCR
+
+    merged = _coerce_rapid_ocr_params(
+        {**RAPIDOCR_DEFAULT_PARAMS, **(params or {})}
+    )
+    key = json.dumps(merged, sort_keys=True, default=str)
+    if key not in _rapid_ocr:
+        _rapid_ocr[key] = RapidOCR(params=merged)
+    return _rapid_ocr[key]
+
+
+def _parse_rapid_ocr_result(result, text_threshold):
+    coord = []
+    text = []
+
+    # RapidOCR returns None when it detects nothing (EasyOCR returns []).
+    if result is None or result.boxes is None or len(result.boxes) == 0:
+        return coord, text
+
+    scores = result.scores if result.scores is not None else [1.0] * len(result.boxes)
+    for poly, txt, score in zip(result.boxes, result.txts, scores):
+        if score > text_threshold:
+            if hasattr(poly, 'tolist'):
+                poly = poly.tolist()
+            coord.append(poly)
+            text.append(txt)
+
+    return coord, text
 
 
 def _parse_paddle_ocr_result(result, text_threshold):
@@ -97,24 +191,135 @@ def get_yolo_model(model_path=None, device=None):
     return YOLOv9Detector(model_path=model_path, device=device)
 
 
+# Context margin added around each icon box before captioning, as a fraction of the
+# box's own width/height. A tight crop gives Florence a glyph with no surroundings;
+# 0.25 measurably improves labels ("Uniformiformiform." -> "Pin", "square" -> "Copy").
+CAPTION_PAD_FRAC = 0.25
+
+# Side length of the square fed to the caption model. Do NOT raise this to Florence's
+# native 768: icon_caption_florence is finetuned on 64px crops, and at 768 it falls back
+# to generic base-Florence prose ("A simple symbol or logo.") or "unanswerable".
+CAPTION_CROP_SIZE = 64
+
+
+# Minimum probability the caption model must assign to its WEAKEST token before we
+# keep the caption. Below this the label is emitted as "" (unknown) rather than a
+# guess -- click_content.py:48 has_no_content() then re-queues that click for a
+# context-aware pass, so abstaining is a handoff, not a dead end.
+#
+# Calibrated on 20 hand-labelled icons from one screenshot: correct captions scored
+# 0.096-0.570, wrong ones 0.016-0.316. 0.08 keeps all 6 correct and drops 12 of 14
+# wrong. Small sample -- re-tune with the content_confidence values recorded on each
+# element if it proves too strict or too loose.
+CAPTION_MIN_CONFIDENCE = 0.08
+
+# Florence's literal non-answers, lowercased and stripped of trailing punctuation.
+CAPTION_NON_ANSWERS = frozenset({'unanswerable', 'unknown', 'unknow', 'n/a', 'none'})
+
+
+def _is_degenerate_caption(text):
+    """True for captions that are malformed regardless of how confident the model is.
+
+    Repetition loops ("Uniformiformiform.", "Firefoxfox", "Toggleoggleoggle") often
+    score HIGH -- the model is very sure about repeating itself -- so confidence
+    alone will not catch them.
+    """
+    cleaned = text.strip().strip('.').lower()
+    if not cleaned or cleaned in CAPTION_NON_ANSWERS:
+        return True
+    # A tail that is some substring repeated back-to-back: "fox"+"fox",
+    # "iform"*2 in "Uniformiformiform". Only sizeable units, to avoid firing on
+    # ordinary doubled letters ("ll" in "full") or real words like "bookkeeper".
+    for unit in range(3, len(cleaned) // 2 + 1):
+        chunk = cleaned[-unit:]
+        if cleaned[-2 * unit:-unit] == chunk:
+            return True
+    return False
+
+
+def _sequence_confidence(scores, sequences, row, eos_id, pad_id):
+    """Weakest per-token probability in one generated caption.
+
+    The minimum beats the mean here: a caption is wrong as soon as one token is a
+    guess, and averaging lets a confident prefix hide it.
+
+    Skips the forced BOS (shares pad's id, hence the pad test) and EOS -- EOS scores
+    ~0.002 almost everywhere, which says nothing about the label and penalises short
+    captions like "Settings" far more than long ones.
+    """
+    import torch as _torch
+
+    worst = None
+    for step, step_logits in enumerate(scores):
+        token = sequences[row, step + 1].item()
+        if token == pad_id:
+            continue
+        if token == eos_id:
+            break
+        logprob = _torch.log_softmax(step_logits[row].float(), dim=-1)[token].item()
+        prob = float(_torch.tensor(logprob).exp())
+        worst = prob if worst is None else min(worst, prob)
+    return 0.0 if worst is None else worst
+
+
+def _pad_box(coord, width, height, pad_frac):
+    """Normalized xyxy -> padded pixel xyxy, clamped to the image."""
+    # coord entries are torch scalars when filtered_boxes is a tensor; float() them
+    # so the arithmetic and round() below are plain Python.
+    xmin, ymin = float(coord[0]) * width, float(coord[1]) * height
+    xmax, ymax = float(coord[2]) * width, float(coord[3]) * height
+    px, py = (xmax - xmin) * pad_frac, (ymax - ymin) * pad_frac
+    return (
+        max(0, int(xmin - px)),
+        max(0, int(ymin - py)),
+        min(width, int(round(xmax + px))),
+        min(height, int(round(ymax + py))),
+    )
+
+
+def _letterbox_icon(crop, size):
+    """Scale ``crop`` to fit ``size``x``size`` keeping aspect, centred on white.
+
+    The original code squashed every crop with ``cv2.resize(crop, (64, 64))``, so a
+    145x70 toolbar button was stretched to a square before captioning -- the direct
+    cause of degenerate captions on wide boxes.
+    """
+    h, w = crop.shape[:2]
+    scale = size / max(h, w)
+    new_h, new_w = max(1, int(round(h * scale))), max(1, int(round(w * scale)))
+    interp = cv2.INTER_CUBIC if scale > 1 else cv2.INTER_AREA
+    resized = cv2.resize(crop, (new_w, new_h), interpolation=interp)
+    canvas = np.full((size, size, 3), 255, dtype=np.uint8)
+    top, left = (size - new_h) // 2, (size - new_w) // 2
+    canvas[top:top + new_h, left:left + new_w] = resized
+    return canvas
+
+
 @torch.inference_mode()
-def get_parsed_content_icon(filtered_boxes, starting_idx, image_source, caption_model_processor, prompt=None, batch_size=128):
+def get_parsed_content_icon(filtered_boxes, starting_idx, image_source, caption_model_processor, prompt=None, batch_size=128,
+                            pad_frac=CAPTION_PAD_FRAC, crop_size=CAPTION_CROP_SIZE,
+                            min_confidence=CAPTION_MIN_CONFIDENCE):
     # Number of samples per batch, --> 128 roughly takes 4 GB of GPU memory for florence v2 model
     to_pil = ToPILImage()
-    if starting_idx:
-        non_ocr_boxes = filtered_boxes[starting_idx:]
-    else:
-        non_ocr_boxes = filtered_boxes
+    # -1 means "no box needs a caption"; plain `if starting_idx` treated that as truthy
+    # and captioned the last box for nothing.
+    if starting_idx < 0:
+        return [], []
+    non_ocr_boxes = filtered_boxes[starting_idx:] if starting_idx else filtered_boxes
+    height, width = image_source.shape[0], image_source.shape[1]
     croped_pil_image = []
     for i, coord in enumerate(non_ocr_boxes):
+        # Callers refill `content` positionally with pop(0), so this list MUST stay the
+        # same length as non_ocr_boxes -- skipping a bad crop would shift every later
+        # caption onto the wrong element. Emit a blank placeholder instead.
         try:
-            xmin, xmax = int(coord[0]*image_source.shape[1]), int(coord[2]*image_source.shape[1])
-            ymin, ymax = int(coord[1]*image_source.shape[0]), int(coord[3]*image_source.shape[0])
+            xmin, ymin, xmax, ymax = _pad_box(coord, width, height, pad_frac)
             cropped_image = image_source[ymin:ymax, xmin:xmax, :]
-            cropped_image = cv2.resize(cropped_image, (64, 64))
-            croped_pil_image.append(to_pil(cropped_image))
-        except:
-            continue
+            cropped_image = _letterbox_icon(cropped_image, crop_size)
+        except Exception as exc:
+            print(f'icon crop failed for box {i} ({list(coord)}): {exc}')
+            cropped_image = np.full((crop_size, crop_size, 3), 255, dtype=np.uint8)
+        croped_pil_image.append(to_pil(cropped_image))
 
     model, processor = caption_model_processor['model'], caption_model_processor['processor']
     if not prompt:
@@ -124,24 +329,49 @@ def get_parsed_content_icon(filtered_boxes, starting_idx, image_source, caption_
             prompt = "The image shows"
 
     generated_texts = []
+    confidences = []
     device = model.device
+    is_florence = 'florence' in model.config.name_or_path
+    eos_id = model.config.eos_token_id
+    pad_id = model.config.pad_token_id
     for i in range(0, len(croped_pil_image), batch_size):
         start = time.time()
         batch = croped_pil_image[i:i+batch_size]
         t1 = time.time()
-        if model.device.type == 'cuda':
-            inputs = processor(images=batch, text=[prompt]*len(batch), return_tensors="pt", do_resize=False).to(device=device, dtype=torch.float16)
-        else:
-            inputs = processor(images=batch, text=[prompt]*len(batch), return_tensors="pt").to(device=device)
-        if 'florence' in model.config.name_or_path:
-            generated_ids = model.generate(input_ids=inputs["input_ids"],pixel_values=inputs["pixel_values"],max_new_tokens=20,num_beams=1, do_sample=False)
+        # do_resize=False on BOTH devices. The crops are already at the finetune's
+        # native size; letting the processor upscale them to 768 (which is what the
+        # CPU branch used to do) makes Florence emit generic prose or "unanswerable",
+        # so CPU and CUDA runs of the same screenshot disagreed.
+        inputs = processor(images=batch, text=[prompt]*len(batch), return_tensors="pt", do_resize=False)
+        # Match the model's real dtype, not an assumption from its device: an fp32
+        # model on CUDA used to crash here ("Input type Half, bias type float").
+        inputs = inputs.to(device=device, dtype=model.dtype)
+        if is_florence:
+            # output_scores lets us tell a confident label from a guess; without it
+            # every caption looks equally authoritative.
+            out = model.generate(input_ids=inputs["input_ids"],pixel_values=inputs["pixel_values"],max_new_tokens=20,num_beams=1, do_sample=False,
+                                 output_scores=True, return_dict_in_generate=True)
+            generated_ids = out.sequences
+            batch_conf = [
+                _sequence_confidence(out.scores, generated_ids, row, eos_id, pad_id)
+                for row in range(len(batch))
+            ]
         else:
             generated_ids = model.generate(**inputs, max_length=100, num_beams=5, no_repeat_ngram_size=2, early_stopping=True, num_return_sequences=1) # temperature=0.01, do_sample=True,
+            # No scoring for the (currently dead) BLIP2 path: 1.0 keeps every caption,
+            # i.e. the old always-answer behaviour.
+            batch_conf = [1.0] * len(batch)
         generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)
         generated_text = [gen.strip() for gen in generated_text]
         generated_texts.extend(generated_text)
+        confidences.extend(batch_conf)
 
-    return generated_texts
+    # Abstain: an unconfident or malformed caption becomes "" rather than a guess.
+    for idx, (text, conf) in enumerate(zip(generated_texts, confidences)):
+        if conf < min_confidence or _is_degenerate_caption(text):
+            generated_texts[idx] = ""
+
+    return generated_texts, confidences
 
 
 
@@ -328,7 +558,13 @@ def get_som_labeled_img(image_source: Union[str, Image.Image], model=None, BOX_T
     # get parsed icon local semantics
     time1 = time.time()
     if use_local_semantics:
-        parsed_content_icon = get_parsed_content_icon(filtered_boxes, starting_idx, image_source, caption_model_processor, prompt=prompt, batch_size=batch_size)
+        parsed_content_icon, parsed_content_conf = get_parsed_content_icon(filtered_boxes, starting_idx, image_source, caption_model_processor, prompt=prompt, batch_size=batch_size)
+        # Captions are consumed positionally below; a length mismatch would silently
+        # shift every caption onto the wrong element.
+        expected = sum(1 for box in filtered_boxes_elem if box['content'] is None)
+        assert len(parsed_content_icon) == expected, (
+            f'caption/box mismatch: {len(parsed_content_icon)} captions for {expected} boxes'
+        )
         ocr_text = [f"Text Box ID {i}: {txt}" for i, txt in enumerate(ocr_text)]
         icon_start = len(ocr_text)
         parsed_content_icon_ls = []
@@ -336,6 +572,9 @@ def get_som_labeled_img(image_source: Union[str, Image.Image], model=None, BOX_T
         for i, box in enumerate(filtered_boxes_elem):
             if box['content'] is None:
                 box['content'] = parsed_content_icon.pop(0)
+                # Kept so the abstention threshold stays tunable after the fact; an
+                # emptied caption would otherwise leave no trace of why.
+                box['content_confidence'] = round(parsed_content_conf.pop(0), 4)
         for i, txt in enumerate(parsed_content_icon):
             parsed_content_icon_ls.append(f"Icon Box ID {str(i+icon_start)}: {txt}")
         parsed_content_merged = ocr_text + parsed_content_icon_ls
@@ -375,7 +614,22 @@ def get_xyxy(input):
     x, y, xp, yp = int(x), int(y), int(xp), int(yp)
     return x, y, xp, yp
 
-def check_ocr_box(image_source: Union[str, Image.Image], output_bb_format='xywh', goal_filtering=None, easyocr_args=None, use_paddleocr=False):
+def _run_easyocr(image_np, easyocr_args):
+    result = get_easyocr_reader().readtext(image_np, **(easyocr_args or {}))
+    return [item[0] for item in result], [item[1] for item in result]
+
+
+def check_ocr_box(image_source: Union[str, Image.Image], output_bb_format='xywh', goal_filtering=None, easyocr_args=None, use_paddleocr=False, ocr_engine=None, rapidocr_params=None):
+    """Run OCR and return ((texts, boxes), goal_filtering).
+
+    ``ocr_engine`` selects 'easyocr', 'paddleocr' or 'rapidocr'. When it is None
+    the legacy ``use_paddleocr`` boolean decides, so existing callers are
+    unaffected. Both non-default engines fall back to EasyOCR on failure.
+
+    ``rapidocr_params`` tunes the rapidocr engine (thresholds and which model
+    to load); see ``get_rapid_ocr``. parse.py passes its RAPIDOCR_PARAMS here.
+    """
+    engine = ocr_engine or ('paddleocr' if use_paddleocr else 'easyocr')
     if isinstance(image_source, str):
         image_source = Image.open(image_source)
     if image_source.mode == 'RGBA':
@@ -383,7 +637,7 @@ def check_ocr_box(image_source: Union[str, Image.Image], output_bb_format='xywh'
         image_source = image_source.convert('RGB')
     image_np = np.array(image_source)
     w, h = image_source.size
-    if use_paddleocr:
+    if engine == 'paddleocr':
         if easyocr_args is None:
             text_threshold = 0.5
         else:
@@ -393,16 +647,25 @@ def check_ocr_box(image_source: Union[str, Image.Image], output_bb_format='xywh'
             coord, text = _parse_paddle_ocr_result(result, text_threshold)
         except Exception as exc:
             print(f'PaddleOCR failed ({exc}); falling back to EasyOCR.')
-            easyocr_args = easyocr_args or {}
-            result = get_easyocr_reader().readtext(image_np, **easyocr_args)
-            coord = [item[0] for item in result]
-            text = [item[1] for item in result]
-    else:  # EasyOCR
-        if easyocr_args is None:
-            easyocr_args = {}
-        result = get_easyocr_reader().readtext(image_np, **easyocr_args)
-        coord = [item[0] for item in result]
-        text = [item[1] for item in result]
+            coord, text = _run_easyocr(image_np, easyocr_args)
+    elif engine == 'rapidocr':
+        # Filter at the same score the engine was configured with, so a
+        # Global.text_score override is not silently overridden here.
+        text_threshold = (rapidocr_params or {}).get(
+            'Global.text_score', RAPIDOCR_TEXT_SCORE
+        )
+        try:
+            result = get_rapid_ocr(rapidocr_params)(image_np)
+            coord, text = _parse_rapid_ocr_result(result, text_threshold)
+        except Exception as exc:
+            print(f'RapidOCR failed ({exc}); falling back to EasyOCR.')
+            coord, text = _run_easyocr(image_np, easyocr_args)
+    elif engine == 'easyocr':
+        coord, text = _run_easyocr(image_np, easyocr_args)
+    else:
+        raise ValueError(
+            f"Unknown OCR engine {engine!r} (use easyocr, paddleocr or rapidocr)"
+        )
     if output_bb_format == 'xywh':
         bb = [get_xywh(item) for item in coord]
     elif output_bb_format == 'xyxy':

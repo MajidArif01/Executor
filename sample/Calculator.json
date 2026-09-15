@@ -1,0 +1,2934 @@
+{
+  "episode_name": "desert-participant",
+  "episode_data": {
+    "episode_id": "desert-participant",
+    "title": "desert-participant",
+    "description": "39 timeline events",
+    "duration": 58,
+    "release_date": "2026-09-09"
+  },
+  "items": [
+    {
+      "index": 0,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Search",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:19:52.571932",
+      "events": [
+        {
+          "x": 25,
+          "y": 1564,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_121952_571932_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:52.571932",
+          "path": "rawdata\\screenshots\\20260909_121952_571932_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_0_20260909_121952_571932_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_121952_571932_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_121952_571932_screen1.png",
+        "image_name": "20260909_121952_571932_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 213,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 89",
+          "type": "text",
+          "bbox": [
+            0.01601562462747097,
+            0.9606249928474426,
+            0.04374999925494194,
+            0.9737499952316284
+          ],
+          "bbox_pixels": [
+            41,
+            1537,
+            112,
+            1558
+          ],
+          "interactivity": false,
+          "content": "mouse_",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 25,
+          "y": 1564
+        },
+        "normalized_query": [
+          0.009766,
+          0.9775
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 1,
+      "type": "Typing",
+      "value": "calculator",
+      "source": "keyboard",
+      "active_window": "Search",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "starttime": "2026-09-09T12:19:53.795542",
+      "endtime": "2026-09-09T12:19:55.446808",
+      "totaltime": "1.651s",
+      "ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "events": [
+        {
+          "timestamp": "2026-09-09T12:19:53.795542",
+          "char": "c"
+        },
+        {
+          "timestamp": "2026-09-09T12:19:53.964004",
+          "char": "a"
+        },
+        {
+          "timestamp": "2026-09-09T12:19:54.118455",
+          "char": "l"
+        },
+        {
+          "timestamp": "2026-09-09T12:19:54.369283",
+          "char": "c"
+        },
+        {
+          "timestamp": "2026-09-09T12:19:54.581656",
+          "char": "u"
+        },
+        {
+          "timestamp": "2026-09-09T12:19:54.816859",
+          "char": "l"
+        },
+        {
+          "timestamp": "2026-09-09T12:19:54.910235",
+          "char": "a"
+        },
+        {
+          "timestamp": "2026-09-09T12:19:55.162978",
+          "char": "t"
+        },
+        {
+          "timestamp": "2026-09-09T12:19:55.346730",
+          "char": "o"
+        },
+        {
+          "timestamp": "2026-09-09T12:19:55.446808",
+          "char": "r"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_121953_795542_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:53.795542",
+          "path": "rawdata\\screenshots\\20260909_121953_795542_screen1.png"
+        },
+        {
+          "value": "20260909_121953_964004_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:53.964004",
+          "path": "rawdata\\screenshots\\20260909_121953_964004_screen1.png"
+        },
+        {
+          "value": "20260909_121954_118455_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:54.118455",
+          "path": "rawdata\\screenshots\\20260909_121954_118455_screen1.png"
+        },
+        {
+          "value": "20260909_121954_369283_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:54.369283",
+          "path": "rawdata\\screenshots\\20260909_121954_369283_screen1.png"
+        },
+        {
+          "value": "20260909_121954_581656_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:54.581656",
+          "path": "rawdata\\screenshots\\20260909_121954_581656_screen1.png"
+        },
+        {
+          "value": "20260909_121954_816859_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:54.816859",
+          "path": "rawdata\\screenshots\\20260909_121954_816859_screen1.png"
+        },
+        {
+          "value": "20260909_121954_910235_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:54.910235",
+          "path": "rawdata\\screenshots\\20260909_121954_910235_screen1.png"
+        },
+        {
+          "value": "20260909_121955_162978_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:55.162978",
+          "path": "rawdata\\screenshots\\20260909_121955_162978_screen1.png"
+        },
+        {
+          "value": "20260909_121955_346730_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:55.346730",
+          "path": "rawdata\\screenshots\\20260909_121955_346730_screen1.png"
+        },
+        {
+          "value": "20260909_121955_446808_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:55.446808",
+          "path": "rawdata\\screenshots\\20260909_121955_446808_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "keyboard",
+        "node_type": "Typing",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\keyboard\\node_1_20260909_121955_446808_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\typing\\20260909_121955_446808_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_121955_446808_screen1.png",
+        "image_name": "20260909_121955_446808_screen1.png",
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 141,
+        "match_strategy": "typed_value_fuzzy_ocr",
+        "match_status": "match",
+        "matched_element": {
+          "element": "icon 92",
+          "content": "Calculator ",
+          "score": 1.0,
+          "interactivity": true,
+          "type": "icon",
+          "source": "box_yolo_content_ocr",
+          "bbox": [
+            0.41071778535842896,
+            0.34288084506988525,
+            0.4732910096645355,
+            0.3707226514816284
+          ]
+        },
+        "candidates": [],
+        "match_query": {
+          "value": "calculator",
+          "field_value": "calculator",
+          "normalized": "calculator",
+          "anchor": [
+            0.009765625,
+            0.9775
+          ]
+        },
+        "match_backend": "rapidfuzz",
+        "match_count": 1
+      }
+    },
+    {
+      "index": 2,
+      "type": "special",
+      "value": "enter",
+      "source": "keyboard",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:19:56.283274",
+      "images": [
+        {
+          "value": "20260909_121956_283274_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:56.283274",
+          "path": "rawdata\\screenshots\\20260909_121956_283274_screen1.png"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:19:59.213397",
+      "events": [
+        {
+          "x": 1208,
+          "y": 1128,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_121959_213397_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:59.213397",
+          "path": "rawdata\\screenshots\\20260909_121959_213397_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_3_20260909_121959_213397_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_121959_213397_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_121959_213397_screen1.png",
+        "image_name": "20260909_121959_213397_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 232,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 87",
+          "type": "text",
+          "bbox": [
+            0.462890625,
+            0.6912500262260437,
+            0.4781250059604645,
+            0.7168750166893005
+          ],
+          "bbox_pixels": [
+            1185,
+            1106,
+            1224,
+            1147
+          ],
+          "interactivity": false,
+          "content": "中",
+          "source": "box_ocr_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1208,
+          "y": 1128
+        },
+        "normalized_query": [
+          0.471875,
+          0.705
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 4,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:19:59.504759",
+      "events": [
+        {
+          "x": 1205,
+          "y": 1041,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_121959_504759_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:19:59.504759",
+          "path": "rawdata\\screenshots\\20260909_121959_504759_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_4_20260909_121959_504759_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_121959_504759_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_121959_504759_screen1.png",
+        "image_name": "20260909_121959_504759_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 235,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 84",
+          "type": "text",
+          "bbox": [
+            0.4566406309604645,
+            0.6581249833106995,
+            0.4671874940395355,
+            0.6800000071525574
+          ],
+          "bbox_pixels": [
+            1169,
+            1053,
+            1196,
+            1088
+          ],
+          "interactivity": false,
+          "content": "5",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1205,
+          "y": 1041
+        },
+        "normalized_query": [
+          0.470703,
+          0.650625
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 5,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:00.151127",
+      "events": [
+        {
+          "x": 1490,
+          "y": 1168,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122000_151127_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:00.151127",
+          "path": "rawdata\\screenshots\\20260909_122000_151127_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_5_20260909_122000_151127_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122000_151127_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122000_151127_screen1.png",
+        "image_name": "20260909_122000_151127_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 233,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 93",
+          "type": "text",
+          "bbox": [
+            0.5894531011581421,
+            0.7143750190734863,
+            0.6156250238418579,
+            0.7256249785423279
+          ],
+          "bbox_pixels": [
+            1509,
+            1143,
+            1576,
+            1161
+          ],
+          "interactivity": false,
+          "content": "mouse_",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1490,
+          "y": 1168
+        },
+        "normalized_query": [
+          0.582031,
+          0.73
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 6,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:00.989549",
+      "events": [
+        {
+          "x": 1303,
+          "y": 1158,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122000_989549_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:00.989549",
+          "path": "rawdata\\screenshots\\20260909_122000_989549_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_6_20260909_122000_989549_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122000_989549_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122000_989549_screen1.png",
+        "image_name": "20260909_122000_989549_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 233,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 92",
+          "type": "text",
+          "bbox": [
+            0.515625,
+            0.706250011920929,
+            0.555859386920929,
+            0.7200000286102295
+          ],
+          "bbox_pixels": [
+            1320,
+            1130,
+            1423,
+            1152
+          ],
+          "interactivity": false,
+          "content": "mouse_left",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1303,
+          "y": 1158
+        },
+        "normalized_query": [
+          0.508984,
+          0.72375
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 7,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:01.274988",
+      "events": [
+        {
+          "x": 1309,
+          "y": 1079,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122001_274988_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:01.274988",
+          "path": "rawdata\\screenshots\\20260909_122001_274988_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_7_20260909_122001_274988_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122001_274988_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122001_274988_screen1.png",
+        "image_name": "20260909_122001_274988_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 235,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 86",
+          "type": "text",
+          "bbox": [
+            0.5003906488418579,
+            0.6693750023841858,
+            0.520312488079071,
+            0.6818749904632568
+          ],
+          "bbox_pixels": [
+            1281,
+            1071,
+            1332,
+            1091
+          ],
+          "interactivity": false,
+          "content": "D",
+          "source": "box_ocr_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1309,
+          "y": 1079
+        },
+        "normalized_query": [
+          0.511328,
+          0.674375
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 8,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:01.994392",
+      "events": [
+        {
+          "x": 1494,
+          "y": 1274,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122001_994392_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:01.994392",
+          "path": "rawdata\\screenshots\\20260909_122001_994392_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_8_20260909_122001_994392_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122001_994392_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122001_994392_screen1.png",
+        "image_name": "20260909_122001_994392_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 234,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 105",
+          "type": "text",
+          "bbox": [
+            0.589062511920929,
+            0.7787500023841858,
+            0.6312500238418579,
+            0.7931249737739563
+          ],
+          "bbox_pixels": [
+            1508,
+            1246,
+            1616,
+            1269
+          ],
+          "interactivity": false,
+          "content": "mouse_left",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1494,
+          "y": 1274
+        },
+        "normalized_query": [
+          0.583594,
+          0.79625
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 9,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:03.999182",
+      "events": [
+        {
+          "x": 1218,
+          "y": 851,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122003_999182_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:03.999182",
+          "path": "rawdata\\screenshots\\20260909_122003_999182_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_9_20260909_122003_999182_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122003_999182_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122003_999182_screen1.png",
+        "image_name": "20260909_122003_999182_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 234,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 60",
+          "type": "text",
+          "bbox": [
+            0.48515623807907104,
+            0.5181249976158142,
+            0.5054687261581421,
+            0.5262500047683716
+          ],
+          "bbox_pixels": [
+            1242,
+            829,
+            1294,
+            842
+          ],
+          "interactivity": false,
+          "content": "mouse",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1218,
+          "y": 851
+        },
+        "normalized_query": [
+          0.475781,
+          0.531875
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 10,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:05.809862",
+      "events": [
+        {
+          "x": 1484,
+          "y": 1196,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122005_809862_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:05.809862",
+          "path": "rawdata\\screenshots\\20260909_122005_809862_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_10_20260909_122005_809862_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122005_809862_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122005_809862_screen1.png",
+        "image_name": "20260909_122005_809862_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 232,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "not_found",
+        "matched_element": null,
+        "candidates": [],
+        "match_query": {
+          "x": 1484,
+          "y": 1196
+        },
+        "normalized_query": [
+          0.579688,
+          0.7475
+        ],
+        "match_count": 0
+      }
+    },
+    {
+      "index": 11,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:07.036178",
+      "events": [
+        {
+          "x": 1206,
+          "y": 1185,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122007_036178_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:07.036178",
+          "path": "rawdata\\screenshots\\20260909_122007_036178_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_11_20260909_122007_036178_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122007_036178_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122007_036178_screen1.png",
+        "image_name": "20260909_122007_036178_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 232,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 91",
+          "type": "text",
+          "bbox": [
+            0.478515625,
+            0.7231249809265137,
+            0.518359363079071,
+            0.7368749976158142
+          ],
+          "bbox_pixels": [
+            1225,
+            1157,
+            1327,
+            1179
+          ],
+          "interactivity": false,
+          "content": "mouse_left",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1206,
+          "y": 1185
+        },
+        "normalized_query": [
+          0.471094,
+          0.740625
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 12,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:07.364185",
+      "events": [
+        {
+          "x": 1328,
+          "y": 1192,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122007_364185_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:07.364185",
+          "path": "rawdata\\screenshots\\20260909_122007_364185_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_12_20260909_122007_364185_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122007_364185_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122007_364185_screen1.png",
+        "image_name": "20260909_122007_364185_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 233,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 92",
+          "type": "text",
+          "bbox": [
+            0.508984386920929,
+            0.737500011920929,
+            0.528124988079071,
+            0.7450000047683716
+          ],
+          "bbox_pixels": [
+            1303,
+            1180,
+            1352,
+            1192
+          ],
+          "interactivity": false,
+          "content": "A",
+          "source": "box_ocr_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1328,
+          "y": 1192
+        },
+        "normalized_query": [
+          0.51875,
+          0.745
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 13,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:08.533724",
+      "events": [
+        {
+          "x": 1504,
+          "y": 1265,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122008_533724_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:08.533724",
+          "path": "rawdata\\screenshots\\20260909_122008_533724_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_13_20260909_122008_533724_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122008_533724_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122008_533724_screen1.png",
+        "image_name": "20260909_122008_533724_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 233,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 101",
+          "type": "text",
+          "bbox": [
+            0.592968761920929,
+            0.7718750238418579,
+            0.6226562261581421,
+            0.7887499928474426
+          ],
+          "bbox_pixels": [
+            1518,
+            1235,
+            1594,
+            1262
+          ],
+          "interactivity": false,
+          "content": "mouse_",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1504,
+          "y": 1265
+        },
+        "normalized_query": [
+          0.5875,
+          0.790625
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 14,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:09.612854",
+      "events": [
+        {
+          "x": 999,
+          "y": 384,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122009_612854_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:09.612854",
+          "path": "rawdata\\screenshots\\20260909_122009_612854_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_14_20260909_122009_612854_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122009_612854_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122009_612854_screen1.png",
+        "image_name": "20260909_122009_612854_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 231,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 187",
+          "type": "icon",
+          "bbox": [
+            0.3753906190395355,
+            0.2204882800579071,
+            0.4695800840854645,
+            0.26368165016174316
+          ],
+          "bbox_pixels": [
+            961,
+            353,
+            1202,
+            422
+          ],
+          "interactivity": true,
+          "content": "中 moulet Standard ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 999,
+          "y": 384
+        },
+        "normalized_query": [
+          0.390234,
+          0.24
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 15,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:10.903269",
+      "events": [
+        {
+          "x": 1132,
+          "y": 788,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122010_903269_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:10.903269",
+          "path": "rawdata\\screenshots\\20260909_122010_903269_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_15_20260909_122010_903269_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122010_903269_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122010_903269_screen1.png",
+        "image_name": "20260909_122010_903269_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 220,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 149",
+          "type": "icon",
+          "bbox": [
+            0.36933594942092896,
+            0.46828123927116394,
+            0.564160168170929,
+            0.5158007740974426
+          ],
+          "bbox_pixels": [
+            946,
+            749,
+            1444,
+            825
+          ],
+          "interactivity": true,
+          "content": "<1> Progra mouse_left ner ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1132,
+          "y": 788
+        },
+        "normalized_query": [
+          0.442188,
+          0.4925
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 16,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:13.021608",
+      "events": [
+        {
+          "x": 1161,
+          "y": 1093,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122013_021608_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:13.021608",
+          "path": "rawdata\\screenshots\\20260909_122013_021608_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_16_20260909_122013_021608_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122013_021608_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122013_021608_screen1.png",
+        "image_name": "20260909_122013_021608_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 247,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "not_found",
+        "matched_element": null,
+        "candidates": [],
+        "match_query": {
+          "x": 1161,
+          "y": 1093
+        },
+        "normalized_query": [
+          0.453516,
+          0.683125
+        ],
+        "match_count": 0
+      }
+    },
+    {
+      "index": 17,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:13.363031",
+      "events": [
+        {
+          "x": 1271,
+          "y": 1108,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122013_363031_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:13.363031",
+          "path": "rawdata\\screenshots\\20260909_122013_363031_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_17_20260909_122013_363031_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122013_363031_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122013_363031_screen1.png",
+        "image_name": "20260909_122013_363031_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 245,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 91",
+          "type": "text",
+          "bbox": [
+            0.48710936307907104,
+            0.6668750047683716,
+            0.49726563692092896,
+            0.6818749904632568
+          ],
+          "bbox_pixels": [
+            1247,
+            1067,
+            1273,
+            1091
+          ],
+          "interactivity": false,
+          "content": "8",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1271,
+          "y": 1108
+        },
+        "normalized_query": [
+          0.496484,
+          0.6925
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 18,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:16.586349",
+      "events": [
+        {
+          "x": 1493,
+          "y": 939,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122016_586349_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:16.586349",
+          "path": "rawdata\\screenshots\\20260909_122016_586349_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_18_20260909_122016_586349_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122016_586349_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122016_586349_screen1.png",
+        "image_name": "20260909_122016_586349_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 243,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 75",
+          "type": "text",
+          "bbox": [
+            0.5941406488418579,
+            0.5687500238418579,
+            0.630859375,
+            0.5843750238418579
+          ],
+          "bbox_pixels": [
+            1521,
+            910,
+            1615,
+            935
+          ],
+          "interactivity": false,
+          "content": "nouse_left",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1493,
+          "y": 939
+        },
+        "normalized_query": [
+          0.583203,
+          0.586875
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 19,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:16.762579",
+      "events": [
+        {
+          "x": 1493,
+          "y": 939,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122016_762579_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:16.762579",
+          "path": "rawdata\\screenshots\\20260909_122016_762579_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_19_20260909_122016_762579_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122016_762579_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122016_762579_screen1.png",
+        "image_name": "20260909_122016_762579_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 246,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 75",
+          "type": "text",
+          "bbox": [
+            0.59375,
+            0.5687500238418579,
+            0.630859375,
+            0.5843750238418579
+          ],
+          "bbox_pixels": [
+            1520,
+            910,
+            1615,
+            935
+          ],
+          "interactivity": false,
+          "content": "nouse_left",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1493,
+          "y": 939
+        },
+        "normalized_query": [
+          0.583203,
+          0.586875
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 20,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:16.929994",
+      "events": [
+        {
+          "x": 1493,
+          "y": 939,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122016_929994_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:16.929994",
+          "path": "rawdata\\screenshots\\20260909_122016_929994_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_20_20260909_122016_929994_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122016_929994_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122016_929994_screen1.png",
+        "image_name": "20260909_122016_929994_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 244,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 75",
+          "type": "text",
+          "bbox": [
+            0.592968761920929,
+            0.5674999952316284,
+            0.6304687261581421,
+            0.5837500095367432
+          ],
+          "bbox_pixels": [
+            1518,
+            908,
+            1614,
+            934
+          ],
+          "interactivity": false,
+          "content": "mouse_left",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1493,
+          "y": 939
+        },
+        "normalized_query": [
+          0.583203,
+          0.586875
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 21,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:18.338388",
+      "events": [
+        {
+          "x": 976,
+          "y": 389,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122018_338388_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:18.338388",
+          "path": "rawdata\\screenshots\\20260909_122018_338388_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_21_20260909_122018_338388_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122018_338388_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122018_338388_screen1.png",
+        "image_name": "20260909_122018_338388_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 242,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 197",
+          "type": "icon",
+          "bbox": [
+            0.38007813692092896,
+            0.22984375059604645,
+            0.4935546815395355,
+            0.25838378071784973
+          ],
+          "bbox_pixels": [
+            973,
+            368,
+            1263,
+            413
+          ],
+          "interactivity": true,
+          "content": "mouse. Programmer left ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 976,
+          "y": 389
+        },
+        "normalized_query": [
+          0.38125,
+          0.243125
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 22,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:19.994228",
+      "events": [
+        {
+          "x": 1208,
+          "y": 686,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122019_994228_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:19.994228",
+          "path": "rawdata\\screenshots\\20260909_122019_994228_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_22_20260909_122019_994228_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122019_994228_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122019_994228_screen1.png",
+        "image_name": "20260909_122019_994228_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 220,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 149",
+          "type": "icon",
+          "bbox": [
+            0.36772459745407104,
+            0.416015625,
+            0.562792956829071,
+            0.46766602993011475
+          ],
+          "bbox_pixels": [
+            941,
+            666,
+            1441,
+            748
+          ],
+          "interactivity": true,
+          "content": "Graphing ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1208,
+          "y": 686
+        },
+        "normalized_query": [
+          0.471875,
+          0.42875
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 23,
+      "type": "click",
+      "value": "mouse_drag",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:24.882772",
+      "events": [
+        {
+          "x": 1315,
+          "y": 1172,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "from=(1453,881),distance=322,duration=1.81s"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122024_882772_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:24.882772",
+          "path": "rawdata\\screenshots\\20260909_122024_882772_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_23_20260909_122024_882772_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122024_882772_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122024_882772_screen1.png",
+        "image_name": "20260909_122024_882772_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 208,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 68",
+          "type": "text",
+          "bbox": [
+            0.520312488079071,
+            0.7162500023841858,
+            0.563281238079071,
+            0.7293750047683716
+          ],
+          "bbox_pixels": [
+            1332,
+            1146,
+            1442,
+            1167
+          ],
+          "interactivity": false,
+          "content": "mouse_drag",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1315,
+          "y": 1172
+        },
+        "normalized_query": [
+          0.513672,
+          0.7325
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 24,
+      "type": "click",
+      "value": "mouse_drag",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:26.988257",
+      "events": [
+        {
+          "x": 1320,
+          "y": 452,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "from=(1262,604),distance=163,duration=1.70s"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122026_988257_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:26.988257",
+          "path": "rawdata\\screenshots\\20260909_122026_988257_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_24_20260909_122026_988257_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122026_988257_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122026_988257_screen1.png",
+        "image_name": "20260909_122026_988257_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 212,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 181",
+          "type": "icon",
+          "bbox": [
+            0.523425281047821,
+            0.2868359386920929,
+            0.5528930425643921,
+            0.33595702052116394
+          ],
+          "bbox_pixels": [
+            1340,
+            459,
+            1415,
+            538
+          ],
+          "interactivity": true,
+          "content": "Mute sound.",
+          "source": "box_yolo_content_yolo",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1320,
+          "y": 452
+        },
+        "normalized_query": [
+          0.515625,
+          0.2825
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 25,
+      "type": "click",
+      "value": "mouse_drag",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:28.548347",
+      "events": [
+        {
+          "x": 1252,
+          "y": 441,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "from=(1253,1041),distance=600,duration=1.19s"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122028_548347_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:28.548347",
+          "path": "rawdata\\screenshots\\20260909_122028_548347_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_25_20260909_122028_548347_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122028_548347_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122028_548347_screen1.png",
+        "image_name": "20260909_122028_548347_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 213,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 211",
+          "type": "icon",
+          "bbox": [
+            0.48040008544921875,
+            0.26029786467552185,
+            0.4998779296875,
+            0.2924218773841858
+          ],
+          "bbox_pixels": [
+            1230,
+            416,
+            1280,
+            468
+          ],
+          "interactivity": true,
+          "content": "Internet Explorer",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1252,
+          "y": 441
+        },
+        "normalized_query": [
+          0.489063,
+          0.275625
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 26,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:29.307425",
+      "events": [
+        {
+          "x": 1009,
+          "y": 390,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122029_307425_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:29.307425",
+          "path": "rawdata\\screenshots\\20260909_122029_307425_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_26_20260909_122029_307425_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122029_307425_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122029_307425_screen1.png",
+        "image_name": "20260909_122029_307425_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 208,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 124",
+          "type": "icon",
+          "bbox": [
+            0.37871092557907104,
+            0.22859375178813934,
+            0.47001951932907104,
+            0.25996580719947815
+          ],
+          "bbox_pixels": [
+            969,
+            366,
+            1203,
+            416
+          ],
+          "interactivity": true,
+          "content": "4 ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1009,
+          "y": 390
+        },
+        "normalized_query": [
+          0.394141,
+          0.24375
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 27,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:30.397463",
+      "events": [
+        {
+          "x": 1194,
+          "y": 858,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122030_397463_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:30.397463",
+          "path": "rawdata\\screenshots\\20260909_122030_397463_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_27_20260909_122030_397463_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122030_397463_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122030_397463_screen1.png",
+        "image_name": "20260909_122030_397463_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 216,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 159",
+          "type": "icon",
+          "bbox": [
+            0.36865234375,
+            0.5170117020606995,
+            0.566455066204071,
+            0.5654199123382568
+          ],
+          "bbox_pixels": [
+            944,
+            827,
+            1450,
+            905
+          ],
+          "interactivity": true,
+          "content": "Date calculation mouse_left ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1194,
+          "y": 858
+        },
+        "normalized_query": [
+          0.466406,
+          0.53625
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 28,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:32.062971",
+      "events": [
+        {
+          "x": 1218,
+          "y": 637,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122032_062971_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:32.062971",
+          "path": "rawdata\\screenshots\\20260909_122032_062971_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_28_20260909_122032_062971_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122032_062971_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122032_062971_screen1.png",
+        "image_name": "20260909_122032_062971_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 216,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 37",
+          "type": "text",
+          "bbox": [
+            0.376953125,
+            0.375,
+            0.510937511920929,
+            0.40062499046325684
+          ],
+          "bbox_pixels": [
+            965,
+            600,
+            1308,
+            641
+          ],
+          "interactivity": false,
+          "content": "September 9, 2026house",
+          "source": "box_ocr_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1218,
+          "y": 637
+        },
+        "normalized_query": [
+          0.475781,
+          0.398125
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 29,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:33.857697",
+      "events": [
+        {
+          "x": 1384,
+          "y": 477,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122033_857697_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:33.857697",
+          "path": "rawdata\\screenshots\\20260909_122033_857697_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_29_20260909_122033_857697_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122033_857697_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122033_857697_screen1.png",
+        "image_name": "20260909_122033_857697_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 246,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 24",
+          "type": "text",
+          "bbox": [
+            0.546875,
+            0.28187501430511475,
+            0.5874999761581421,
+            0.29374998807907104
+          ],
+          "bbox_pixels": [
+            1400,
+            451,
+            1504,
+            470
+          ],
+          "interactivity": false,
+          "content": "mouse_left",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1384,
+          "y": 477
+        },
+        "normalized_query": [
+          0.540625,
+          0.298125
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 30,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:34.493649",
+      "events": [
+        {
+          "x": 975,
+          "y": 376,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122034_493649_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:34.493649",
+          "path": "rawdata\\screenshots\\20260909_122034_493649_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_30_20260909_122034_493649_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122034_493649_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122034_493649_screen1.png",
+        "image_name": "20260909_122034_493649_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 216,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 195",
+          "type": "icon",
+          "bbox": [
+            0.3712402284145355,
+            0.2218017578125,
+            0.3909851014614105,
+            0.25248047709465027
+          ],
+          "bbox_pixels": [
+            950,
+            355,
+            1001,
+            404
+          ],
+          "interactivity": true,
+          "content": "Target",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 975,
+          "y": 376
+        },
+        "normalized_query": [
+          0.380859,
+          0.235
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 31,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:35.732083",
+      "events": [
+        {
+          "x": 1161,
+          "y": 1024,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122035_732083_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:35.732083",
+          "path": "rawdata\\screenshots\\20260909_122035_732083_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_31_20260909_122035_732083_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122035_732083_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122035_732083_screen1.png",
+        "image_name": "20260909_122035_732083_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 212,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 161",
+          "type": "icon",
+          "bbox": [
+            0.3690429627895355,
+            0.6179101467132568,
+            0.565722644329071,
+            0.6655468940734863
+          ],
+          "bbox_pixels": [
+            945,
+            989,
+            1448,
+            1065
+          ],
+          "interactivity": true,
+          "content": "8 Currency mouse_left ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1161,
+          "y": 1024
+        },
+        "normalized_query": [
+          0.453516,
+          0.64
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 32,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:38.699201",
+      "events": [
+        {
+          "x": 983,
+          "y": 399,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122038_699201_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:38.699201",
+          "path": "rawdata\\screenshots\\20260909_122038_699201_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_32_20260909_122038_699201_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122038_699201_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122038_699201_screen1.png",
+        "image_name": "20260909_122038_699201_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 223,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 21",
+          "type": "text",
+          "bbox": [
+            0.38945311307907104,
+            0.22875000536441803,
+            0.46875,
+            0.25874999165534973
+          ],
+          "bbox_pixels": [
+            997,
+            366,
+            1200,
+            414
+          ],
+          "interactivity": false,
+          "content": "mouCurrency",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 983,
+          "y": 399
+        },
+        "normalized_query": [
+          0.383984,
+          0.249375
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 33,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:42.983460",
+      "events": [
+        {
+          "x": 978,
+          "y": 417,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122042_983460_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:42.983460",
+          "path": "rawdata\\screenshots\\20260909_122042_983460_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_33_20260909_122042_983460_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122042_983460_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122042_983460_screen1.png",
+        "image_name": "20260909_122042_983460_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 219,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 173",
+          "type": "icon",
+          "bbox": [
+            0.3705078065395355,
+            0.2290624976158142,
+            0.5660156011581421,
+            0.2747534215450287
+          ],
+          "bbox_pixels": [
+            948,
+            366,
+            1449,
+            440
+          ],
+          "interactivity": true,
+          "content": "mouse_left ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 978,
+          "y": 417
+        },
+        "normalized_query": [
+          0.382031,
+          0.260625
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 34,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:44.086398",
+      "events": [
+        {
+          "x": 973,
+          "y": 418,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122044_086398_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:44.086398",
+          "path": "rawdata\\screenshots\\20260909_122044_086398_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_34_20260909_122044_086398_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122044_086398_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122044_086398_screen1.png",
+        "image_name": "20260909_122044_086398_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 230,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 214",
+          "type": "icon",
+          "bbox": [
+            0.371429443359375,
+            0.23561523854732513,
+            0.39335328340530396,
+            0.2667578160762787
+          ],
+          "bbox_pixels": [
+            951,
+            377,
+            1007,
+            427
+          ],
+          "interactivity": true,
+          "content": "Radar View",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 973,
+          "y": 418
+        },
+        "normalized_query": [
+          0.380078,
+          0.26125
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 35,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:44.813518",
+      "events": [
+        {
+          "x": 1173,
+          "y": 547,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122044_813518_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:44.813518",
+          "path": "rawdata\\screenshots\\20260909_122044_813518_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_35_20260909_122044_813518_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122044_813518_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122044_813518_screen1.png",
+        "image_name": "20260909_122044_813518_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 221,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 138",
+          "type": "icon",
+          "bbox": [
+            0.3656249940395355,
+            0.31886717677116394,
+            0.56298828125,
+            0.36574217677116394
+          ],
+          "bbox_pixels": [
+            936,
+            510,
+            1441,
+            585
+          ],
+          "interactivity": true,
+          "content": "Standard mouse_left ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1173,
+          "y": 547
+        },
+        "normalized_query": [
+          0.458203,
+          0.341875
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 36,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Calculator",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:47.052405",
+      "events": [
+        {
+          "x": 1515,
+          "y": 309,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122047_052405_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:47.052405",
+          "path": "rawdata\\screenshots\\20260909_122047_052405_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_36_20260909_122047_052405_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122047_052405_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122047_052405_screen1.png",
+        "image_name": "20260909_122047_052405_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 233,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 194",
+          "type": "icon",
+          "bbox": [
+            0.581250011920929,
+            0.172119140625,
+            0.6171814203262329,
+            0.21162109076976776
+          ],
+          "bbox_pixels": [
+            1488,
+            275,
+            1580,
+            339
+          ],
+          "interactivity": true,
+          "content": "heartbeat",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1515,
+          "y": 309
+        },
+        "normalized_query": [
+          0.591797,
+          0.193125
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 37,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Taskbar",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:48.680055",
+      "events": [
+        {
+          "x": 1581,
+          "y": 1563,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122048_680055_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:48.680055",
+          "path": "rawdata\\screenshots\\20260909_122048_680055_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_37_20260909_122048_680055_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122048_680055_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122048_680055_screen1.png",
+        "image_name": "20260909_122048_680055_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 205,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 97",
+          "type": "text",
+          "bbox": [
+            0.6253906488418579,
+            0.9593750238418579,
+            0.6640625,
+            0.9731249809265137
+          ],
+          "bbox_pixels": [
+            1601,
+            1535,
+            1700,
+            1557
+          ],
+          "interactivity": false,
+          "content": "mouse_left",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1581,
+          "y": 1563
+        },
+        "normalized_query": [
+          0.617578,
+          0.976875
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 38,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "ORCA",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T12:20:50.020467",
+      "events": [
+        {
+          "x": 1001,
+          "y": 453,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_122050_020467_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T12:20:50.020467",
+          "path": "rawdata\\screenshots\\20260909_122050_020467_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\AnotatedJson\\mouse\\node_38_20260909_122050_020467_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\AnotatedData\\mouse\\20260909_122050_020467_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\desert-participant\\rawdata\\screenshots\\20260909_122050_020467_screen1.png",
+        "image_name": "20260909_122050_020467_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 208,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 169",
+          "type": "icon",
+          "bbox": [
+            0.37818604707717896,
+            0.2556836009025574,
+            0.4022216796875,
+            0.2973925769329071
+          ],
+          "bbox_pixels": [
+            968,
+            409,
+            1030,
+            476
+          ],
+          "interactivity": true,
+          "content": "Internet Explorer - Internet Explorer - web browser.",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1001,
+          "y": 453
+        },
+        "normalized_query": [
+          0.391016,
+          0.283125
+        ],
+        "match_count": 1
+      }
+    }
+  ]
+}

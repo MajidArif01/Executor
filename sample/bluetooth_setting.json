@@ -1,0 +1,1948 @@
+{
+  "episode_name": "upbeat-compressor",
+  "episode_data": {
+    "episode_id": "upbeat-compressor",
+    "title": "upbeat-compressor",
+    "description": "26 timeline events",
+    "duration": 31,
+    "release_date": "2026-09-09"
+  },
+  "items": [
+    {
+      "index": 0,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Search",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:04.195916",
+      "events": [
+        {
+          "x": 35,
+          "y": 1539,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112904_195916_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:04.195916",
+          "path": "rawdata\\screenshots\\20260909_112904_195916_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\mouse\\node_0_20260909_112904_195916_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\mouse\\20260909_112904_195916_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112904_195916_screen1.png",
+        "image_name": "20260909_112904_195916_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 202,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "tolerant",
+        "matched_element": {
+          "element_id": "icon 91",
+          "type": "text",
+          "bbox": [
+            0.02031249925494194,
+            0.9443749785423279,
+            0.06015624850988388,
+            0.9581249952316284
+          ],
+          "bbox_pixels": [
+            52,
+            1511,
+            154,
+            1533
+          ],
+          "interactivity": false,
+          "content": "mouse_left",
+          "source": "box_ocr_content_ocr",
+          "match": "tolerant"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 35,
+          "y": 1539
+        },
+        "normalized_query": [
+          0.013672,
+          0.961875
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 1,
+      "type": "Typing",
+      "value": "settings",
+      "source": "keyboard",
+      "active_window": "Search",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "starttime": "2026-09-09T11:29:04.973044",
+      "endtime": "2026-09-09T11:29:06.467472",
+      "totaltime": "1.494s",
+      "ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "events": [
+        {
+          "timestamp": "2026-09-09T11:29:04.973044",
+          "char": "s"
+        },
+        {
+          "timestamp": "2026-09-09T11:29:05.117205",
+          "char": "e"
+        },
+        {
+          "timestamp": "2026-09-09T11:29:05.483558",
+          "char": "t"
+        },
+        {
+          "timestamp": "2026-09-09T11:29:05.637353",
+          "char": "t"
+        },
+        {
+          "timestamp": "2026-09-09T11:29:05.830255",
+          "char": "i"
+        },
+        {
+          "timestamp": "2026-09-09T11:29:05.992930",
+          "char": "n"
+        },
+        {
+          "timestamp": "2026-09-09T11:29:06.073573",
+          "char": "g"
+        },
+        {
+          "timestamp": "2026-09-09T11:29:06.467472",
+          "char": "s"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112904_973044_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:04.973044",
+          "path": "rawdata\\screenshots\\20260909_112904_973044_screen1.png"
+        },
+        {
+          "value": "20260909_112905_117205_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:05.117205",
+          "path": "rawdata\\screenshots\\20260909_112905_117205_screen1.png"
+        },
+        {
+          "value": "20260909_112905_483558_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:05.483558",
+          "path": "rawdata\\screenshots\\20260909_112905_483558_screen1.png"
+        },
+        {
+          "value": "20260909_112905_637353_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:05.637353",
+          "path": "rawdata\\screenshots\\20260909_112905_637353_screen1.png"
+        },
+        {
+          "value": "20260909_112905_830255_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:05.830255",
+          "path": "rawdata\\screenshots\\20260909_112905_830255_screen1.png"
+        },
+        {
+          "value": "20260909_112905_992930_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:05.992930",
+          "path": "rawdata\\screenshots\\20260909_112905_992930_screen1.png"
+        },
+        {
+          "value": "20260909_112906_073573_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:06.073573",
+          "path": "rawdata\\screenshots\\20260909_112906_073573_screen1.png"
+        },
+        {
+          "value": "20260909_112906_467472_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:06.467472",
+          "path": "rawdata\\screenshots\\20260909_112906_467472_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "keyboard",
+        "node_type": "Typing",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\keyboard\\node_1_20260909_112906_467472_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\typing\\20260909_112906_467472_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112906_467472_screen1.png",
+        "image_name": "20260909_112906_467472_screen1.png",
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 131,
+        "match_strategy": "typed_value_fuzzy_ocr",
+        "match_status": "match",
+        "matched_element": {
+          "element": "icon 52",
+          "content": "Settings ",
+          "score": 1.0,
+          "interactivity": true,
+          "type": "icon",
+          "source": "box_yolo_content_ocr",
+          "bbox": [
+            0.2673095762729645,
+            0.14158691465854645,
+            0.32609862089157104,
+            0.18265624344348907
+          ]
+        },
+        "candidates": [],
+        "match_query": {
+          "value": "settings",
+          "field_value": "settings",
+          "normalized": "settings",
+          "anchor": [
+            0.013671875,
+            0.961875
+          ]
+        },
+        "match_backend": "rapidfuzz",
+        "match_count": 1
+      }
+    },
+    {
+      "index": 2,
+      "type": "special",
+      "value": "enter",
+      "source": "keyboard",
+      "active_window": "Search",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:07.256167",
+      "images": [
+        {
+          "value": "20260909_112907_256167_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:07.256167",
+          "path": "rawdata\\screenshots\\20260909_112907_256167_screen1.png"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "static": false,
+      "type": "FreeTime",
+      "value": "Idle-Screenshots",
+      "source": "Screenshots",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:09.272725",
+      "images": [
+        {
+          "value": "20260909_112909_272725_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:09.272725",
+          "path": "rawdata\\screenshots\\20260909_112909_272725_screen1.png",
+          "duplicate": false
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:10.647484",
+      "events": [
+        {
+          "x": 344,
+          "y": 475,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112910_647484_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:10.647484",
+          "path": "rawdata\\screenshots\\20260909_112910_647484_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\mouse\\node_4_20260909_112910_647484_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\mouse\\20260909_112910_647484_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112910_647484_screen1.png",
+        "image_name": "20260909_112910_647484_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 100,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 38",
+          "type": "icon",
+          "bbox": [
+            0.013964843936264515,
+            0.2779296934604645,
+            0.23081055283546448,
+            0.3230273425579071
+          ],
+          "bbox_pixels": [
+            36,
+            445,
+            591,
+            517
+          ],
+          "interactivity": true,
+          "content": "mouse_left 水 Bluetooth & devi ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 344,
+          "y": 475
+        },
+        "normalized_query": [
+          0.134375,
+          0.296875
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 5,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:12.742495",
+      "events": [
+        {
+          "x": 2467,
+          "y": 844,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112912_742495_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:12.742495",
+          "path": "rawdata\\screenshots\\20260909_112912_742495_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\mouse\\node_5_20260909_112912_742495_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\mouse\\20260909_112912_742495_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112912_742495_screen1.png",
+        "image_name": "20260909_112912_742495_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 82,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 35",
+          "type": "icon",
+          "bbox": [
+            0.954821765422821,
+            0.5100293159484863,
+            0.9738708734512329,
+            0.5420117378234863
+          ],
+          "bbox_pixels": [
+            2444,
+            816,
+            2493,
+            867
+          ],
+          "interactivity": true,
+          "content": "中 ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 2467,
+          "y": 844
+        },
+        "normalized_query": [
+          0.963672,
+          0.5275
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 6,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:15.617437",
+      "events": [
+        {
+          "x": 2465,
+          "y": 833,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112915_617437_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:15.617437",
+          "path": "rawdata\\screenshots\\20260909_112915_617437_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\mouse\\node_6_20260909_112915_617437_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\mouse\\20260909_112915_617437_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112915_617437_screen1.png",
+        "image_name": "20260909_112915_617437_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 82,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 57",
+          "type": "icon",
+          "bbox": [
+            0.93670654296875,
+            0.5060155987739563,
+            0.9690185785293579,
+            0.5363671779632568
+          ],
+          "bbox_pixels": [
+            2398,
+            810,
+            2481,
+            858
+          ],
+          "interactivity": true,
+          "content": "internet explorer or web browser.",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 2465,
+          "y": 833
+        },
+        "normalized_query": [
+          0.962891,
+          0.520625
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 7,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:16.771323",
+      "events": [
+        {
+          "x": 2438,
+          "y": 832,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112916_771323_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:16.771323",
+          "path": "rawdata\\screenshots\\20260909_112916_771323_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\mouse\\node_7_20260909_112916_771323_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\mouse\\20260909_112916_771323_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112916_771323_screen1.png",
+        "image_name": "20260909_112916_771323_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 83,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 58",
+          "type": "icon",
+          "bbox": [
+            0.9370361566543579,
+            0.5032031536102295,
+            0.967559814453125,
+            0.5377050638198853
+          ],
+          "bbox_pixels": [
+            2399,
+            805,
+            2477,
+            860
+          ],
+          "interactivity": true,
+          "content": "Internet Explorer - Internet Explorer",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 2438,
+          "y": 832
+        },
+        "normalized_query": [
+          0.952344,
+          0.52
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 8,
+      "type": "scroll",
+      "value": "scroll_down",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:19.724473",
+      "events": [
+        {
+          "x": 2190,
+          "y": 1199,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=-1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112919_724473_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:19.724473",
+          "path": "rawdata\\screenshots\\20260909_112919_724473_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_8_20260909_112919_724473_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112919_724473_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112919_724473_screen1.png",
+        "image_name": "20260909_112919_724473_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 87,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 57",
+          "type": "icon",
+          "bbox": [
+            0.8457702398300171,
+            0.7341406345367432,
+            0.8670593500137329,
+            0.7847656011581421
+          ],
+          "bbox_pixels": [
+            2165,
+            1175,
+            2220,
+            1256
+          ],
+          "interactivity": true,
+          "content": "中 ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 2190,
+          "y": 1199
+        },
+        "normalized_query": [
+          0.855469,
+          0.749375
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": -1
+      }
+    },
+    {
+      "index": 9,
+      "type": "scroll",
+      "value": "scroll_down",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:19.781718",
+      "events": [
+        {
+          "x": 2190,
+          "y": 1199,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=-1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112919_781718_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:19.781718",
+          "path": "rawdata\\screenshots\\20260909_112919_781718_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_9_20260909_112919_781718_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112919_781718_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112919_781718_screen1.png",
+        "image_name": "20260909_112919_781718_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 83,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 34",
+          "type": "icon",
+          "bbox": [
+            0.8414062261581421,
+            0.7021874785423279,
+            0.979541003704071,
+            0.7893750071525574
+          ],
+          "bbox_pixels": [
+            2154,
+            1123,
+            2508,
+            1263
+          ],
+          "interactivity": true,
+          "content": "scroll_down (down) ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 2190,
+          "y": 1199
+        },
+        "normalized_query": [
+          0.855469,
+          0.749375
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": -1
+      }
+    },
+    {
+      "index": 10,
+      "type": "scroll",
+      "value": "scroll_down",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:20.951245",
+      "events": [
+        {
+          "x": 1122,
+          "y": 1153,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=-1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112920_951245_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:20.951245",
+          "path": "rawdata\\screenshots\\20260909_112920_951245_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_10_20260909_112920_951245_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112920_951245_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112920_951245_screen1.png",
+        "image_name": "20260909_112920_951245_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 88,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 84",
+          "type": "icon",
+          "bbox": [
+            0.4298339784145355,
+            0.6989843845367432,
+            0.46647340059280396,
+            0.763134777545929
+          ],
+          "bbox_pixels": [
+            1100,
+            1118,
+            1194,
+            1221
+          ],
+          "interactivity": true,
+          "content": "Sculiling",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1122,
+          "y": 1153
+        },
+        "normalized_query": [
+          0.438281,
+          0.720625
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": -1
+      }
+    },
+    {
+      "index": 11,
+      "type": "scroll",
+      "value": "scroll_down",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:20.995112",
+      "events": [
+        {
+          "x": 1123,
+          "y": 1163,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=-1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112920_995112_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:20.995112",
+          "path": "rawdata\\screenshots\\20260909_112920_995112_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_11_20260909_112920_995112_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112920_995112_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112920_995112_screen1.png",
+        "image_name": "20260909_112920_995112_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 83,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 32",
+          "type": "icon",
+          "bbox": [
+            0.2540039122104645,
+            0.649218738079071,
+            0.9765625,
+            0.7342773675918579
+          ],
+          "bbox_pixels": [
+            650,
+            1039,
+            2500,
+            1175
+          ],
+          "interactivity": true,
+          "content": "0 Mouse 7 Buttons, mouse pointer speed, scrolling scrol_down (down) ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1123,
+          "y": 1163
+        },
+        "normalized_query": [
+          0.438672,
+          0.726875
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": -1
+      }
+    },
+    {
+      "index": 12,
+      "type": "scroll",
+      "value": "scroll_down",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:23.194527",
+      "events": [
+        {
+          "x": 1582,
+          "y": 1047,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=-1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112923_194527_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:23.194527",
+          "path": "rawdata\\screenshots\\20260909_112923_194527_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_12_20260909_112923_194527_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112923_194527_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112923_194527_screen1.png",
+        "image_name": "20260909_112923_194527_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 75,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 24",
+          "type": "icon",
+          "bbox": [
+            0.25371092557907104,
+            0.6446093916893005,
+            0.985546886920929,
+            0.7305859327316284
+          ],
+          "bbox_pixels": [
+            649,
+            1031,
+            2523,
+            1169
+          ],
+          "interactivity": true,
+          "content": "中 udpad 1 Taps, gestures, scrolling, zooming à  ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1582,
+          "y": 1047
+        },
+        "normalized_query": [
+          0.617969,
+          0.654375
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": -1
+      }
+    },
+    {
+      "index": 13,
+      "type": "scroll",
+      "value": "scroll_down",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:23.259364",
+      "events": [
+        {
+          "x": 1582,
+          "y": 1047,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=-1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112923_259364_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:23.259364",
+          "path": "rawdata\\screenshots\\20260909_112923_259364_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_13_20260909_112923_259364_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112923_259364_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112923_259364_screen1.png",
+        "image_name": "20260909_112923_259364_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 77,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 29",
+          "type": "icon",
+          "bbox": [
+            0.2540039122104645,
+            0.5719531178474426,
+            0.9761718511581421,
+            0.6568359136581421
+          ],
+          "bbox_pixels": [
+            650,
+            915,
+            2499,
+            1051
+          ],
+          "interactivity": true,
+          "content": "upad 7 Taps, gestures, scrolling, zooming scroll_down (down) ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1582,
+          "y": 1047
+        },
+        "normalized_query": [
+          0.617969,
+          0.654375
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": -1
+      }
+    },
+    {
+      "index": 14,
+      "type": "scroll",
+      "value": "scroll_up",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:24.957835",
+      "events": [
+        {
+          "x": 1603,
+          "y": 1162,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112924_957835_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:24.957835",
+          "path": "rawdata\\screenshots\\20260909_112924_957835_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_14_20260909_112924_957835_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112924_957835_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112924_957835_screen1.png",
+        "image_name": "20260909_112924_957835_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 79,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 26",
+          "type": "icon",
+          "bbox": [
+            0.25410157442092896,
+            0.7177343964576721,
+            0.9867187738418579,
+            0.8050195574760437
+          ],
+          "bbox_pixels": [
+            651,
+            1148,
+            2526,
+            1288
+          ],
+          "interactivity": true,
+          "content": "AutoPlay A Defaults for removable drives and memory cards ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1603,
+          "y": 1162
+        },
+        "normalized_query": [
+          0.626172,
+          0.72625
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": 1
+      }
+    },
+    {
+      "index": 15,
+      "type": "scroll",
+      "value": "scroll_up",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:25.015983",
+      "events": [
+        {
+          "x": 1603,
+          "y": 1162,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112925_015983_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:25.015983",
+          "path": "rawdata\\screenshots\\20260909_112925_015983_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_15_20260909_112925_015983_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112925_015983_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112925_015983_screen1.png",
+        "image_name": "20260909_112925_015983_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 73,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 33",
+          "type": "icon",
+          "bbox": [
+            0.25078123807907104,
+            0.688281238079071,
+            0.978515625,
+            0.778515636920929
+          ],
+          "bbox_pixels": [
+            642,
+            1101,
+            2505,
+            1246
+          ],
+          "interactivity": true,
+          "content": "Pen & Windows Ink scroll_up (up) Ds Right-handed or left-handed, pen button shortcuts, handwriting ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1603,
+          "y": 1162
+        },
+        "normalized_query": [
+          0.626172,
+          0.72625
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": 1
+      }
+    },
+    {
+      "index": 16,
+      "type": "scroll",
+      "value": "scroll_up",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:25.029541",
+      "events": [
+        {
+          "x": 1603,
+          "y": 1162,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112925_029541_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:25.029541",
+          "path": "rawdata\\screenshots\\20260909_112925_029541_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_16_20260909_112925_029541_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112925_029541_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112925_029541_screen1.png",
+        "image_name": "20260909_112925_029541_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 80,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 38",
+          "type": "icon",
+          "bbox": [
+            0.2515625059604645,
+            0.6886816620826721,
+            0.978320300579071,
+            0.7783984541893005
+          ],
+          "bbox_pixels": [
+            644,
+            1102,
+            2504,
+            1245
+          ],
+          "interactivity": true,
+          "content": "udpad scroll_up (up) Taps, gestures, scrolling, zooming ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1603,
+          "y": 1162
+        },
+        "normalized_query": [
+          0.626172,
+          0.72625
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": 1
+      }
+    },
+    {
+      "index": 17,
+      "type": "scroll",
+      "value": "scroll_up",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:25.045555",
+      "events": [
+        {
+          "x": 1603,
+          "y": 1162,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112925_045555_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:25.045555",
+          "path": "rawdata\\screenshots\\20260909_112925_045555_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_17_20260909_112925_045555_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112925_045555_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112925_045555_screen1.png",
+        "image_name": "20260909_112925_045555_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 86,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 54",
+          "type": "icon",
+          "bbox": [
+            0.2533203065395355,
+            0.7047656178474426,
+            0.986328125,
+            0.7896435260772705
+          ],
+          "bbox_pixels": [
+            648,
+            1128,
+            2525,
+            1263
+          ],
+          "interactivity": true,
+          "content": "scroll_up (up) 0 Mouse Buttons, mouse pointer speed, scrolling ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1603,
+          "y": 1162
+        },
+        "normalized_query": [
+          0.626172,
+          0.72625
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": 1
+      }
+    },
+    {
+      "index": 18,
+      "type": "scroll",
+      "value": "scroll_up",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:25.095431",
+      "events": [
+        {
+          "x": 1603,
+          "y": 1162,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112925_095431_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:25.095431",
+          "path": "rawdata\\screenshots\\20260909_112925_095431_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_18_20260909_112925_095431_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112925_095431_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112925_095431_screen1.png",
+        "image_name": "20260909_112925_095431_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 84,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 52",
+          "type": "icon",
+          "bbox": [
+            0.615405261516571,
+            0.6917383074760437,
+            0.682373046875,
+            0.7423242330551147
+          ],
+          "bbox_pixels": [
+            1575,
+            1107,
+            1747,
+            1188
+          ],
+          "interactivity": true,
+          "content": "scroll_up (up) ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1603,
+          "y": 1162
+        },
+        "normalized_query": [
+          0.626172,
+          0.72625
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": 1
+      }
+    },
+    {
+      "index": 19,
+      "type": "scroll",
+      "value": "scroll_up",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:25.473586",
+      "events": [
+        {
+          "x": 1603,
+          "y": 1162,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112925_473586_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:25.473586",
+          "path": "rawdata\\screenshots\\20260909_112925_473586_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_19_20260909_112925_473586_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112925_473586_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112925_473586_screen1.png",
+        "image_name": "20260909_112925_473586_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 82,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 45",
+          "type": "icon",
+          "bbox": [
+            0.615612804889679,
+            0.6865429878234863,
+            0.6822265386581421,
+            0.7426953315734863
+          ],
+          "bbox_pixels": [
+            1576,
+            1098,
+            1746,
+            1188
+          ],
+          "interactivity": true,
+          "content": "由 scroll_up (up) ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1603,
+          "y": 1162
+        },
+        "normalized_query": [
+          0.626172,
+          0.72625
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": 1
+      }
+    },
+    {
+      "index": 20,
+      "type": "scroll",
+      "value": "scroll_up",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:25.527149",
+      "events": [
+        {
+          "x": 1603,
+          "y": 1162,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112925_527149_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:25.527149",
+          "path": "rawdata\\screenshots\\20260909_112925_527149_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_20_20260909_112925_527149_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112925_527149_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112925_527149_screen1.png",
+        "image_name": "20260909_112925_527149_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 82,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 45",
+          "type": "icon",
+          "bbox": [
+            0.615612804889679,
+            0.6865429878234863,
+            0.6822265386581421,
+            0.7426953315734863
+          ],
+          "bbox_pixels": [
+            1576,
+            1098,
+            1746,
+            1188
+          ],
+          "interactivity": true,
+          "content": "由 scroll_up (up) ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1603,
+          "y": 1162
+        },
+        "normalized_query": [
+          0.626172,
+          0.72625
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": 1
+      }
+    },
+    {
+      "index": 21,
+      "type": "scroll",
+      "value": "scroll_up",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:25.562923",
+      "events": [
+        {
+          "x": 1603,
+          "y": 1162,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "dx=0,dy=1"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112925_562923_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:25.562923",
+          "path": "rawdata\\screenshots\\20260909_112925_562923_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "scroll",
+        "node_type": "scroll",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\scroll\\node_21_20260909_112925_562923_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\scroll\\20260909_112925_562923_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112925_562923_screen1.png",
+        "image_name": "20260909_112925_562923_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 82,
+        "match_strategy": "scroll_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 45",
+          "type": "icon",
+          "bbox": [
+            0.615612804889679,
+            0.6865429878234863,
+            0.6822265386581421,
+            0.7426953315734863
+          ],
+          "bbox_pixels": [
+            1576,
+            1098,
+            1746,
+            1188
+          ],
+          "interactivity": true,
+          "content": "由 scroll_up (up) ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1603,
+          "y": 1162
+        },
+        "normalized_query": [
+          0.626172,
+          0.72625
+        ],
+        "match_count": 1,
+        "scroll_dx": 0,
+        "scroll_dy": 1
+      }
+    },
+    {
+      "index": 22,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:27.931900",
+      "events": [
+        {
+          "x": 1610,
+          "y": 727,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112927_931900_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:27.931900",
+          "path": "rawdata\\screenshots\\20260909_112927_931900_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\mouse\\node_22_20260909_112927_931900_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\mouse\\20260909_112927_931900_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112927_931900_screen1.png",
+        "image_name": "20260909_112927_931900_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 84,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 46",
+          "type": "icon",
+          "bbox": [
+            0.5718628168106079,
+            0.43598634004592896,
+            0.6747070550918579,
+            0.45969727635383606
+          ],
+          "bbox_pixels": [
+            1464,
+            698,
+            1727,
+            736
+          ],
+          "interactivity": true,
+          "content": "View more dievices left ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1610,
+          "y": 727
+        },
+        "normalized_query": [
+          0.628906,
+          0.454375
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 23,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:30.726230",
+      "events": [
+        {
+          "x": 52,
+          "y": 33,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112930_726230_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:30.726230",
+          "path": "rawdata\\screenshots\\20260909_112930_726230_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\mouse\\node_23_20260909_112930_726230_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\mouse\\20260909_112930_726230_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112930_726230_screen1.png",
+        "image_name": "20260909_112930_726230_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 91,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 58",
+          "type": "icon",
+          "bbox": [
+            0.0064453124068677425,
+            0.0,
+            0.23095703125,
+            0.05503906309604645
+          ],
+          "bbox_pixels": [
+            16,
+            0,
+            591,
+            88
+          ],
+          "interactivity": true,
+          "content": "mouse_left Settings ",
+          "source": "box_yolo_content_ocr",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 52,
+          "y": 33
+        },
+        "normalized_query": [
+          0.020313,
+          0.020625
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 24,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "Settings",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:33.496669",
+      "events": [
+        {
+          "x": 1509,
+          "y": 1570,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112933_496669_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:33.496669",
+          "path": "rawdata\\screenshots\\20260909_112933_496669_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\mouse\\node_24_20260909_112933_496669_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\mouse\\20260909_112933_496669_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112933_496669_screen1.png",
+        "image_name": "20260909_112933_496669_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 85,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 83",
+          "type": "icon",
+          "bbox": [
+            0.5823425054550171,
+            0.9580175876617432,
+            0.606457531452179,
+            0.9937890768051147
+          ],
+          "bbox_pixels": [
+            1491,
+            1533,
+            1553,
+            1590
+          ],
+          "interactivity": true,
+          "content": "Video connector",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 1509,
+          "y": 1570
+        },
+        "normalized_query": [
+          0.589453,
+          0.98125
+        ],
+        "match_count": 1
+      }
+    },
+    {
+      "index": 25,
+      "type": "click",
+      "value": "mouse_left",
+      "source": "mouse",
+      "active_window": "ORCA",
+      "active_window_profile": null,
+      "active_window_email": null,
+      "time": "2026-09-09T11:29:34.701178",
+      "events": [
+        {
+          "x": 737,
+          "y": 361,
+          "screen": 1,
+          "reported_screen": 1,
+          "screen_resolution": "2560x1600",
+          "detail": "left"
+        }
+      ],
+      "images": [
+        {
+          "value": "20260909_112934_701178_screen1.png",
+          "screen": 1,
+          "timestamp": "2026-09-09T11:29:34.701178",
+          "path": "rawdata\\screenshots\\20260909_112934_701178_screen1.png"
+        }
+      ],
+      "omniparser": {
+        "kind": "mouse",
+        "node_type": "click",
+        "annotated_json_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\AnotatedJson\\mouse\\node_25_20260909_112934_701178_screen1.json",
+        "annotated_image": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\AnotatedData\\mouse\\20260909_112934_701178_screen1_anotated.png",
+        "image_path": "D:\\My Desktop\\Orca_Observation\\episode\\upbeat-compressor\\rawdata\\screenshots\\20260909_112934_701178_screen1.png",
+        "image_name": "20260909_112934_701178_screen1.png",
+        "image_size": [
+          2560,
+          1600
+        ],
+        "screen": 1,
+        "screen_matched": true,
+        "element_count": 92,
+        "match_strategy": "click_point_in_bbox",
+        "match_status": "bbox",
+        "matched_element": {
+          "element_id": "icon 63",
+          "type": "icon",
+          "bbox": [
+            0.2786865234375,
+            0.20203125476837158,
+            0.30250245332717896,
+            0.24184569716453552
+          ],
+          "bbox_pixels": [
+            713,
+            323,
+            774,
+            387
+          ],
+          "interactivity": true,
+          "content": "Internet Explorer - Internet Explorer - browser browser.",
+          "source": "box_yolo_content_yolo",
+          "match": "bbox"
+        },
+        "candidates": [],
+        "match_query": {
+          "x": 737,
+          "y": 361
+        },
+        "normalized_query": [
+          0.287891,
+          0.225625
+        ],
+        "match_count": 1
+      }
+    }
+  ]
+}

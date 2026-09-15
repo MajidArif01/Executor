@@ -1,0 +1,1274 @@
+{
+    "icon 0": {
+        "type": "text",
+        "bbox": [
+            0.575390636920929,
+            0.014375000260770321,
+            0.6363281011581421,
+            0.038750000298023224
+        ],
+        "interactivity": false,
+        "content": "Delivery UAVs",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 1": {
+        "type": "text",
+        "bbox": [
+            0.640625,
+            0.01875000074505806,
+            0.664843738079071,
+            0.03375000134110451
+        ],
+        "interactivity": false,
+        "content": "Vicor",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 2": {
+        "type": "text",
+        "bbox": [
+            0.8148437738418579,
+            0.33375000953674316,
+            0.8531249761581421,
+            0.3487499952316284
+        ],
+        "interactivity": false,
+        "content": "4.8 Rated",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 3": {
+        "type": "text",
+        "bbox": [
+            0.821484386920929,
+            0.3568750023841858,
+            0.926953136920929,
+            0.37937501072883606
+        ],
+        "interactivity": false,
+        "content": "Download the App now",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 4": {
+        "type": "text",
+        "bbox": [
+            0.05156249925494194,
+            0.3512499928474426,
+            0.27031248807907104,
+            0.42750000953674316
+        ],
+        "interactivity": false,
+        "content": "HOME DECOR",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 5": {
+        "type": "text",
+        "bbox": [
+            0.8609374761581421,
+            0.4074999988079071,
+            0.8851562738418579,
+            0.42500001192092896
+        ],
+        "interactivity": false,
+        "content": "Free",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 6": {
+        "type": "text",
+        "bbox": [
+            0.860546886920929,
+            0.4256249964237213,
+            0.908984363079071,
+            0.4506250023841858
+        ],
+        "interactivity": false,
+        "content": "Shipping",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 7": {
+        "type": "text",
+        "bbox": [
+            0.05156249925494194,
+            0.41749998927116394,
+            0.29218751192092896,
+            0.4950000047683716
+        ],
+        "interactivity": false,
+        "content": "G FAVOURITES",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 8": {
+        "type": "text",
+        "bbox": [
+            0.8609374761581421,
+            0.46000000834465027,
+            0.9117187261581421,
+            0.47874999046325684
+        ],
+        "interactivity": false,
+        "content": "Exclusive",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 9": {
+        "type": "text",
+        "bbox": [
+            0.8609374761581421,
+            0.47874999046325684,
+            0.9125000238418579,
+            0.4987500011920929
+        ],
+        "interactivity": false,
+        "content": "Vouchers",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 10": {
+        "type": "text",
+        "bbox": [
+            0.08085937798023224,
+            0.590624988079071,
+            0.15703125298023224,
+            0.6243749856948853
+        ],
+        "interactivity": false,
+        "content": "Shop Now",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 11": {
+        "type": "text",
+        "bbox": [
+            0.8902343511581421,
+            0.5993750095367432,
+            0.9203125238418579,
+            0.6181250214576721
+        ],
+        "interactivity": false,
+        "content": "Google",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 12": {
+        "type": "text",
+        "bbox": [
+            0.8031250238418579,
+            0.6474999785423279,
+            0.89453125,
+            0.6650000214576721
+        ],
+        "interactivity": false,
+        "content": "Download the App Nowl",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 13": {
+        "type": "text",
+        "bbox": [
+            0.02265625074505806,
+            0.7237499952316284,
+            0.10781250149011612,
+            0.7537500262260437
+        ],
+        "interactivity": false,
+        "content": "Flash Sale",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 14": {
+        "type": "text",
+        "bbox": [
+            0.555859386920929,
+            0.8743749856948853,
+            0.576171875,
+            0.8868749737739563
+        ],
+        "interactivity": false,
+        "content": "PACK",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 15": {
+        "type": "text",
+        "bbox": [
+            0.0015625000232830644,
+            0.9175000190734863,
+            0.2886718809604645,
+            0.940625011920929
+        ],
+        "interactivity": false,
+        "content": "https:] /pages daraz pk/wow/gcp/route/daraz/pkfupr/router?hybrid =",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 16": {
+        "type": "text",
+        "bbox": [
+            0.2914062440395355,
+            0.918749988079071,
+            0.3265624940395355,
+            0.9350000023841858
+        ],
+        "interactivity": false,
+        "content": "&data ..",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 17": {
+        "type": "text",
+        "bbox": [
+            0.754687488079071,
+            0.9268749952316284,
+            0.7816406488418579,
+            0.9362499713897705
+        ],
+        "interactivity": false,
+        "content": "protectsFrom",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 18": {
+        "type": "text",
+        "bbox": [
+            0.7660156488418579,
+            0.934374988079071,
+            0.776171863079071,
+            0.9418749809265137
+        ],
+        "interactivity": false,
+        "content": "nm",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 19": {
+        "type": "text",
+        "bbox": [
+            0.925000011920929,
+            0.9512500166893005,
+            0.9671875238418579,
+            0.9674999713897705
+        ],
+        "interactivity": false,
+        "content": "11*01 AM",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 20": {
+        "type": "text",
+        "bbox": [
+            0.921875,
+            0.9712499976158142,
+            0.96875,
+            0.9900000095367432
+        ],
+        "interactivity": false,
+        "content": "8/31/2026",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 21": {
+        "type": "text",
+        "bbox": [
+            0.9195312261581421,
+            0.5975000262260437,
+            0.9371093511581421,
+            0.6181250214576721
+        ],
+        "interactivity": false,
+        "content": "Play",
+        "source": "box_ocr_content_ocr"
+    },
+    "icon 22": {
+        "type": "icon",
+        "bbox": [
+            0.8135782480239868,
+            0.7795706391334534,
+            0.9437446594238281,
+            0.8264073133468628
+        ],
+        "interactivity": true,
+        "content": "SHOP ALL PRODUCTS ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 23": {
+        "type": "icon",
+        "bbox": [
+            0.794779896736145,
+            0.007635383401066065,
+            0.8790783882141113,
+            0.04222347214818001
+        ],
+        "interactivity": true,
+        "content": "Ask Gemini ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 24": {
+        "type": "icon",
+        "bbox": [
+            0.18875396251678467,
+            0.15393859148025513,
+            0.6890420913696289,
+            0.21029949188232422
+        ],
+        "interactivity": true,
+        "content": "Search Daraz ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 25": {
+        "type": "icon",
+        "bbox": [
+            0.9060077667236328,
+            0.057871971279382706,
+            0.9649761915206909,
+            0.09967071563005447
+        ],
+        "interactivity": true,
+        "content": "Work ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 26": {
+        "type": "icon",
+        "bbox": [
+            0.47368550300598145,
+            0.11373798549175262,
+            0.5599296689033508,
+            0.1325407773256302
+        ],
+        "interactivity": true,
+        "content": "SAVE MORE ON APP ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 27": {
+        "type": "icon",
+        "bbox": [
+            0.5889452695846558,
+            0.11295997351408005,
+            0.6572023630142212,
+            0.13298195600509644
+        ],
+        "interactivity": true,
+        "content": "SELL ON DARAZ ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 28": {
+        "type": "icon",
+        "bbox": [
+            0.6769929528236389,
+            0.10844887048006058,
+            0.7733184099197388,
+            0.14650271832942963
+        ],
+        "interactivity": true,
+        "content": "HELP SUPPORT ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 29": {
+        "type": "icon",
+        "bbox": [
+            0.7742378115653992,
+            0.10881465673446655,
+            0.8301023244857788,
+            0.1485399603843689
+        ],
+        "interactivity": true,
+        "content": "LOGIN ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 30": {
+        "type": "icon",
+        "bbox": [
+            0.8239961862564087,
+            0.8890325427055359,
+            0.9494960904121399,
+            0.9395883679389954
+        ],
+        "interactivity": true,
+        "content": "Messages ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 31": {
+        "type": "icon",
+        "bbox": [
+            0.379582941532135,
+            0.005451011471450329,
+            0.5451235175132751,
+            0.047844771295785904
+        ],
+        "interactivity": true,
+        "content": "Online Shopping Pakistan: ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 32": {
+        "type": "icon",
+        "bbox": [
+            0.8313226699829102,
+            0.10867489129304886,
+            0.8945299983024597,
+            0.14887256920337677
+        ],
+        "interactivity": true,
+        "content": "SIGN UP ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 33": {
+        "type": "icon",
+        "bbox": [
+            0.20613256096839905,
+            0.013364162296056747,
+            0.3475259840488434,
+            0.03674907609820366
+        ],
+        "interactivity": true,
+        "content": "The Importance of Using Rel ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 34": {
+        "type": "icon",
+        "bbox": [
+            0.04251689836382866,
+            0.15797927975654602,
+            0.11669988930225372,
+            0.2089672088623047
+        ],
+        "interactivity": true,
+        "content": "Dardz ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 35": {
+        "type": "icon",
+        "bbox": [
+            0.039315707981586456,
+            0.7898619771003723,
+            0.10628560930490494,
+            0.8122601509094238
+        ],
+        "interactivity": true,
+        "content": "On Sale Now ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 36": {
+        "type": "icon",
+        "bbox": [
+            0.03902863711118698,
+            0.01500432938337326,
+            0.17377862334251404,
+            0.03587200120091438
+        ],
+        "interactivity": true,
+        "content": "tds Removing Duplicate or Simile ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 37": {
+        "type": "icon",
+        "bbox": [
+            0.036031853407621384,
+            0.950545072555542,
+            0.2058391273021698,
+            0.9896893501281738
+        ],
+        "interactivity": true,
+        "content": "Search ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 38": {
+        "type": "icon",
+        "bbox": [
+            0.10757261514663696,
+            0.05776454880833626,
+            0.1840055286884308,
+            0.09941486269235611
+        ],
+        "interactivity": true,
+        "content": "daraz pk/#? ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 39": {
+        "type": "icon",
+        "bbox": [
+            0.8686248064041138,
+            0.9590135812759399,
+            0.9099356532096863,
+            0.9791358709335327
+        ],
+        "interactivity": true,
+        "content": "100% ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 40": {
+        "type": "icon",
+        "bbox": [
+            0.13819119334220886,
+            0.8672741055488586,
+            0.16431167721748352,
+            0.9064396023750305
+        ],
+        "interactivity": true,
+        "content": "LONG ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 41": {
+        "type": "icon",
+        "bbox": [
+            0.3374927043914795,
+            0.852375864982605,
+            0.4837521016597748,
+            0.9413438439369202
+        ],
+        "interactivity": true,
+        "content": "ponutrolt ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 42": {
+        "type": "icon",
+        "bbox": [
+            0.6813076138496399,
+            0.9399816989898682,
+            0.7211382389068604,
+            0.9999098181724548
+        ],
+        "interactivity": true,
+        "content": "869 ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 43": {
+        "type": "icon",
+        "bbox": [
+            0.3424636125564575,
+            0.43694594502449036,
+            0.4322291314601898,
+            0.5783839225769043
+        ],
+        "interactivity": true,
+        "content": "UP TO 3090 OFF ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 44": {
+        "type": "icon",
+        "bbox": [
+            0.831250786781311,
+            0.2781312167644501,
+            0.9217893481254578,
+            0.2998828589916229
+        ],
+        "interactivity": true,
+        "content": "TRY DARAZ APP ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 45": {
+        "type": "icon",
+        "bbox": [
+            0.875378429889679,
+            0.5480647087097168,
+            0.9401108026504517,
+            0.577657163143158
+        ],
+        "interactivity": true,
+        "content": "App Store ",
+        "source": "box_yolo_content_ocr"
+    },
+    "icon 46": {
+        "type": "icon",
+        "bbox": [
+            0.691089391708374,
+            0.1535879522562027,
+            0.7260359525680542,
+            0.20986682176589966
+        ],
+        "interactivity": true,
+        "content": "Red circle with no entry or exit.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 47": {
+        "type": "icon",
+        "bbox": [
+            0.8221186399459839,
+            0.0575597770512104,
+            0.8559451103210449,
+            0.09922050684690475
+        ],
+        "interactivity": true,
+        "content": "a star or rating function.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 48": {
+        "type": "icon",
+        "bbox": [
+            0.8960561752319336,
+            0.10824691504240036,
+            0.9707064628601074,
+            0.15099987387657166
+        ],
+        "interactivity": true,
+        "content": "A simple Arabic script.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 49": {
+        "type": "icon",
+        "bbox": [
+            0.0047623696736991405,
+            0.007557964418083429,
+            0.026837855577468872,
+            0.04312221705913544
+        ],
+        "interactivity": true,
+        "content": "A tick or tick mark indicating a tick or completion.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 50": {
+        "type": "icon",
+        "bbox": [
+            0.7391636371612549,
+            0.15370933711528778,
+            0.7822408080101013,
+            0.2171390950679779
+        ],
+        "interactivity": true,
+        "content": "white line drawn horizontally",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 51": {
+        "type": "icon",
+        "bbox": [
+            0.28996598720550537,
+            0.9600620865821838,
+            0.3019081652164459,
+            0.980286717414856
+        ],
+        "interactivity": true,
+        "content": "A computer browser or browser icon.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 52": {
+        "type": "icon",
+        "bbox": [
+            0.2408013641834259,
+            0.9613598585128784,
+            0.2513900399208069,
+            0.9792680144309998
+        ],
+        "interactivity": true,
+        "content": "A computer mouse's profile.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 53": {
+        "type": "icon",
+        "bbox": [
+            0.26527488231658936,
+            0.9606107473373413,
+            0.2780522406101227,
+            0.9802390933036804
+        ],
+        "interactivity": true,
+        "content": "A yellow folder with a blue rectangle.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 54": {
+        "type": "icon",
+        "bbox": [
+            0.8687115907669067,
+            0.06539840996265411,
+            0.8838576078414917,
+            0.08864787966012955
+        ],
+        "interactivity": true,
+        "content": "A clip or tag function.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 55": {
+        "type": "icon",
+        "bbox": [
+            0.00872422568500042,
+            0.06434543430805206,
+            0.029481148347258568,
+            0.09560695290565491
+        ],
+        "interactivity": true,
+        "content": "a push button or arrow.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 56": {
+        "type": "icon",
+        "bbox": [
+            0.8934885859489441,
+            0.002003517234697938,
+            0.9280412793159485,
+            0.04695163667201996
+        ],
+        "interactivity": true,
+        "content": "a bar or rectangle shape.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 57": {
+        "type": "icon",
+        "bbox": [
+            0.9289814233779907,
+            0.000689659093040973,
+            0.9630522727966309,
+            0.049543265253305435
+        ],
+        "interactivity": true,
+        "content": "square shape",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 58": {
+        "type": "icon",
+        "bbox": [
+            0.31533873081207275,
+            0.9606767892837524,
+            0.326546847820282,
+            0.9800599813461304
+        ],
+        "interactivity": true,
+        "content": "A sticky note or sticky note.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 59": {
+        "type": "icon",
+        "bbox": [
+            0.2151181697845459,
+            0.9572974443435669,
+            0.22808590531349182,
+            0.9804099798202515
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 60": {
+        "type": "icon",
+        "bbox": [
+            0.6991685628890991,
+            0.012467346154153347,
+            0.7167722582817078,
+            0.03736121952533722
+        ],
+        "interactivity": true,
+        "content": "A close or cancel button.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 61": {
+        "type": "icon",
+        "bbox": [
+            0.9935595393180847,
+            0,
+            1,
+            0.050447843968868256
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 62": {
+        "type": "icon",
+        "bbox": [
+            0.06519589573144913,
+            0.06570350378751755,
+            0.08340898156166077,
+            0.09259830415248871
+        ],
+        "interactivity": true,
+        "content": "Refresh or restart function.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 63": {
+        "type": "icon",
+        "bbox": [
+            0.7269586324691772,
+            0.013791389763355255,
+            0.7426655888557434,
+            0.03650467097759247
+        ],
+        "interactivity": true,
+        "content": "white plus sign",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 64": {
+        "type": "icon",
+        "bbox": [
+            0.475856214761734,
+            0.6492931246757507,
+            0.48609670996665955,
+            0.6660586595535278
+        ],
+        "interactivity": true,
+        "content": "A blurry image or profile.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 65": {
+        "type": "icon",
+        "bbox": [
+            0.48994627594947815,
+            0.9603561162948608,
+            0.5027631521224976,
+            0.9802520871162415
+        ],
+        "interactivity": true,
+        "content": "A low profile or video play button.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 66": {
+        "type": "icon",
+        "bbox": [
+            0.024689633399248123,
+            0.4525161683559418,
+            0.04240206629037857,
+            0.4907863736152649
+        ],
+        "interactivity": true,
+        "content": "A cursor pointing to the right.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 67": {
+        "type": "icon",
+        "bbox": [
+            0.3411123752593994,
+            0.9602503180503845,
+            0.3523273169994354,
+            0.9803982377052307
+        ],
+        "interactivity": true,
+        "content": "A red icon or symbol.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 68": {
+        "type": "icon",
+        "bbox": [
+            0.36652180552482605,
+            0.9589869976043701,
+            0.37712767720222473,
+            0.9791164398193359
+        ],
+        "interactivity": true,
+        "content": "A simple, simple, or simple logo.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 69": {
+        "type": "icon",
+        "bbox": [
+            0.5042561292648315,
+            0.6491806507110596,
+            0.5132299661636353,
+            0.6665542125701904
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 70": {
+        "type": "icon",
+        "bbox": [
+            0.4624289572238922,
+            0.9555330872535706,
+            0.4807431101799011,
+            0.9853600859642029
+        ],
+        "interactivity": true,
+        "content": "A web browser logo.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 71": {
+        "type": "icon",
+        "bbox": [
+            0.43984001874923706,
+            0.9590212106704712,
+            0.4526093006134033,
+            0.9816134572029114
+        ],
+        "interactivity": true,
+        "content": "A phone call indicator.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 72": {
+        "type": "icon",
+        "bbox": [
+            0.41470208764076233,
+            0.9589235782623291,
+            0.42737406492233276,
+            0.9819320440292358
+        ],
+        "interactivity": true,
+        "content": "A simple icon or logo.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 73": {
+        "type": "icon",
+        "bbox": [
+            0.5149617791175842,
+            0.9597220420837402,
+            0.5278335809707642,
+            0.9810417294502258
+        ],
+        "interactivity": true,
+        "content": "A rectangle shape with a slight angle.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 74": {
+        "type": "icon",
+        "bbox": [
+            0.7771081924438477,
+            0.45260781049728394,
+            0.7962039709091187,
+            0.49035874009132385
+        ],
+        "interactivity": true,
+        "content": "A blurry arrow or arrow tip.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 75": {
+        "type": "icon",
+        "bbox": [
+            0.490592896938324,
+            0.6490854620933533,
+            0.5000849962234497,
+            0.6669200658798218
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 76": {
+        "type": "icon",
+        "bbox": [
+            0.3901340663433075,
+            0.9575977921485901,
+            0.4032007157802582,
+            0.9821914434432983
+        ],
+        "interactivity": true,
+        "content": "A symbol or logo related to social media or social media platforms.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 77": {
+        "type": "icon",
+        "bbox": [
+            0.013315255753695965,
+            0.9592568278312683,
+            0.02627592720091343,
+            0.9825153946876526
+        ],
+        "interactivity": true,
+        "content": "the start and finish screen.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 78": {
+        "type": "icon",
+        "bbox": [
+            0.5897382497787476,
+            0.9592264294624329,
+            0.6039531826972961,
+            0.981654942035675
+        ],
+        "interactivity": true,
+        "content": "A blue arrow pointing downward.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 79": {
+        "type": "icon",
+        "bbox": [
+            0.4055863916873932,
+            0.6475832462310791,
+            0.4139385223388672,
+            0.6657494902610779
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 80": {
+        "type": "icon",
+        "bbox": [
+            0.4631962776184082,
+            0.6490611433982849,
+            0.4714725613594055,
+            0.6660484075546265
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 81": {
+        "type": "icon",
+        "bbox": [
+            0.614709198474884,
+            0.9582822322845459,
+            0.6291773319244385,
+            0.9834973216056824
+        ],
+        "interactivity": true,
+        "content": "A mozilla firefox browser.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 82": {
+        "type": "icon",
+        "bbox": [
+            0.034469954669475555,
+            0.06216197833418846,
+            0.05643410608172417,
+            0.09573760628700256
+        ],
+        "interactivity": true,
+        "content": "a push button or arrow.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 83": {
+        "type": "icon",
+        "bbox": [
+            0.5407871007919312,
+            0.9601409435272217,
+            0.5545386672019958,
+            0.981339693069458
+        ],
+        "interactivity": true,
+        "content": "A low pixelated image or profile.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 84": {
+        "type": "icon",
+        "bbox": [
+            0.4471321105957031,
+            0.6487926244735718,
+            0.45726656913757324,
+            0.6661598086357117
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 85": {
+        "type": "icon",
+        "bbox": [
+            0.8016241192817688,
+            0.9397953152656555,
+            0.8269710540771484,
+            1
+        ],
+        "interactivity": true,
+        "content": "remote control.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 86": {
+        "type": "icon",
+        "bbox": [
+            0.4181452691555023,
+            0.647495448589325,
+            0.42875462770462036,
+            0.6661059856414795
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 87": {
+        "type": "icon",
+        "bbox": [
+            0.3492756187915802,
+            0.6486198306083679,
+            0.35830312967300415,
+            0.6653039455413818
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 88": {
+        "type": "icon",
+        "bbox": [
+            0.39179080724716187,
+            0.6476129293441772,
+            0.3993246853351593,
+            0.665831983089447
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 89": {
+        "type": "icon",
+        "bbox": [
+            0.5654007196426392,
+            0.9599179625511169,
+            0.57883620262146,
+            0.9800436496734619
+        ],
+        "interactivity": true,
+        "content": "A push pin or pinning function.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 90": {
+        "type": "icon",
+        "bbox": [
+            0.9865714907646179,
+            0.05751914903521538,
+            1,
+            0.09911391884088516
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 91": {
+        "type": "icon",
+        "bbox": [
+            0.4352557063102722,
+            0.6482656598091125,
+            0.4441949427127838,
+            0.6659943461418152
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 92": {
+        "type": "icon",
+        "bbox": [
+            0.3645227253437042,
+            0.6484104990959167,
+            0.37390628457069397,
+            0.665364682674408
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 93": {
+        "type": "icon",
+        "bbox": [
+            0.8276605606079102,
+            0.9400225877761841,
+            0.8475419282913208,
+            1
+        ],
+        "interactivity": true,
+        "content": "an eye shadow.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 94": {
+        "type": "icon",
+        "bbox": [
+            0.779183566570282,
+            0.9573658108711243,
+            0.7964431047439575,
+            0.9839093089103699
+        ],
+        "interactivity": true,
+        "content": "A circle with a missing button.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 95": {
+        "type": "icon",
+        "bbox": [
+            0.3788275420665741,
+            0.6479095220565796,
+            0.3874821066856384,
+            0.6657924056053162
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 96": {
+        "type": "icon",
+        "bbox": [
+            0.7267457246780396,
+            0.953916072845459,
+            0.7482240200042725,
+            0.9835128784179688
+        ],
+        "interactivity": true,
+        "content": "A cursor pointing to the right.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 97": {
+        "type": "icon",
+        "bbox": [
+            0.7531760334968567,
+            0.9562336206436157,
+            0.7720489501953125,
+            0.9830033779144287
+        ],
+        "interactivity": true,
+        "content": "A blurry finger.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 98": {
+        "type": "icon",
+        "bbox": [
+            0.17938323318958282,
+            0.012049083597958088,
+            0.19713786244392395,
+            0.03695949539542198
+        ],
+        "interactivity": true,
+        "content": "A close or cancel button.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 99": {
+        "type": "icon",
+        "bbox": [
+            0.9718022346496582,
+            0.9589182138442993,
+            0.9836639165878296,
+            0.9815162420272827
+        ],
+        "interactivity": true,
+        "content": "A simple logout or logout function.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 100": {
+        "type": "icon",
+        "bbox": [
+            0.35292163491249084,
+            0.009913482703268528,
+            0.3696097135543823,
+            0.036715127527713776
+        ],
+        "interactivity": true,
+        "content": "A close or cancel button.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 101": {
+        "type": "icon",
+        "bbox": [
+            0.33493441343307495,
+            0.6485110521316528,
+            0.3443536162376404,
+            0.6653306484222412
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 102": {
+        "type": "icon",
+        "bbox": [
+            0.8495886921882629,
+            0.9585326313972473,
+            0.8617006540298462,
+            0.979337751865387
+        ],
+        "interactivity": true,
+        "content": "A simple line or trail marker.",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 103": {
+        "type": "icon",
+        "bbox": [
+            0.4300735890865326,
+            0.6476542949676514,
+            0.43355584144592285,
+            0.6660895347595215
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 104": {
+        "type": "icon",
+        "bbox": [
+            0.992646336555481,
+            0.10770252346992493,
+            1,
+            0.13162045180797577
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    },
+    "icon 105": {
+        "type": "icon",
+        "bbox": [
+            0.8029742240905762,
+            0.5047670602798462,
+            0.9475553631782532,
+            0.5270556807518005
+        ],
+        "interactivity": true,
+        "content": "unanswerable",
+        "source": "box_yolo_content_yolo"
+    }
+}

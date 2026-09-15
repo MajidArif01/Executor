@@ -1,0 +1,1593 @@
+{
+  "timestamp": "2026-09-09T19:07:19.190661",
+  "source": "windows_uiautomation",
+  "scope": "foreground_window",
+  "ax_tree_available": true,
+  "reason": null,
+  "screen": 1,
+  "truncated": false,
+  "node_count": 86,
+  "tree": {
+    "name": "Taskbar",
+    "control_type": "PaneControl",
+    "automation_id": "",
+    "class_name": "Shell_TrayWnd",
+    "localized_control_type": "pane",
+    "bounding_rectangle": {
+      "left": 0,
+      "top": 1528,
+      "right": 2560,
+      "bottom": 1600
+    },
+    "clickable_point": null,
+    "is_enabled": true,
+    "is_offscreen": false,
+    "has_keyboard_focus": false,
+    "children": [
+      {
+        "name": "",
+        "control_type": "PaneControl",
+        "automation_id": "",
+        "class_name": "TrayNotifyWnd",
+        "localized_control_type": "pane",
+        "bounding_rectangle": {
+          "left": 2140,
+          "top": 1528,
+          "right": 2560,
+          "bottom": 1600
+        },
+        "clickable_point": null,
+        "is_enabled": true,
+        "is_offscreen": false,
+        "has_keyboard_focus": false,
+        "children": []
+      },
+      {
+        "name": "",
+        "control_type": "PaneControl",
+        "automation_id": "40965",
+        "class_name": "ReBarWindow32",
+        "localized_control_type": "pane",
+        "bounding_rectangle": {
+          "left": 68,
+          "top": 1528,
+          "right": 1064,
+          "bottom": 1600
+        },
+        "clickable_point": null,
+        "is_enabled": true,
+        "is_offscreen": false,
+        "has_keyboard_focus": false,
+        "children": [
+          {
+            "name": "Running applications",
+            "control_type": "PaneControl",
+            "automation_id": "",
+            "class_name": "MSTaskSwWClass",
+            "localized_control_type": "pane",
+            "bounding_rectangle": {
+              "left": 68,
+              "top": 1528,
+              "right": 1064,
+              "bottom": 1600
+            },
+            "clickable_point": null,
+            "is_enabled": true,
+            "is_offscreen": false,
+            "has_keyboard_focus": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "DesktopWindowXamlSource",
+        "control_type": "PaneControl",
+        "automation_id": "",
+        "class_name": "Windows.UI.Composition.DesktopWindowContentBridge",
+        "localized_control_type": "pane",
+        "bounding_rectangle": {
+          "left": 0,
+          "top": 1528,
+          "right": 2560,
+          "bottom": 1600
+        },
+        "clickable_point": null,
+        "is_enabled": true,
+        "is_offscreen": false,
+        "has_keyboard_focus": true,
+        "children": [
+          {
+            "name": "",
+            "control_type": "PaneControl",
+            "automation_id": "",
+            "class_name": "Windows.UI.Input.InputSite.WindowClass",
+            "localized_control_type": "pane",
+            "bounding_rectangle": {
+              "left": 0,
+              "top": 1528,
+              "right": 1706,
+              "bottom": 1576
+            },
+            "clickable_point": null,
+            "is_enabled": true,
+            "is_offscreen": false,
+            "has_keyboard_focus": true,
+            "children": [
+              {
+                "name": "",
+                "control_type": "PaneControl",
+                "automation_id": "TaskbarFrame",
+                "class_name": "Taskbar.TaskbarFrameAutomationPeer",
+                "localized_control_type": "pane",
+                "bounding_rectangle": {
+                  "left": 0,
+                  "top": 1528,
+                  "right": 2560,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "",
+                    "control_type": "GroupControl",
+                    "automation_id": "TaskbarFrameRepeater",
+                    "class_name": "",
+                    "localized_control_type": "group",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 1528,
+                      "right": 2036,
+                      "bottom": 1600
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": [
+                      {
+                        "name": "Start",
+                        "control_type": "ButtonControl",
+                        "automation_id": "StartButton",
+                        "class_name": "ToggleButton",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 0,
+                          "top": 1528,
+                          "right": 68,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 16,
+                              "top": 1546,
+                              "right": 52,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Search",
+                        "control_type": "ButtonControl",
+                        "automation_id": "SearchButton",
+                        "class_name": "ToggleButton",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 71,
+                          "top": 1540,
+                          "right": 401,
+                          "bottom": 1588
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 88,
+                              "top": 1552,
+                              "right": 111,
+                              "bottom": 1576
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          },
+                          {
+                            "name": "Search",
+                            "control_type": "TextControl",
+                            "automation_id": "SearchBoxTextBlock",
+                            "class_name": "TextBlock",
+                            "localized_control_type": "text",
+                            "bounding_rectangle": {
+                              "left": 127,
+                              "top": 1549,
+                              "right": 189,
+                              "bottom": 1576
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          },
+                          {
+                            "name": "Search - 2026 NFL season starts",
+                            "control_type": "ButtonControl",
+                            "automation_id": "SearchGleamButton",
+                            "class_name": "Button",
+                            "localized_control_type": "button",
+                            "bounding_rectangle": {
+                              "left": 317,
+                              "top": 1540,
+                              "right": 401,
+                              "bottom": 1588
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          },
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "DynamicSearchBoxGleamImage",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 319,
+                              "top": 1545,
+                              "right": 397,
+                              "bottom": 1584
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Task View",
+                        "control_type": "ButtonControl",
+                        "automation_id": "TaskViewButton",
+                        "class_name": "ToggleButton",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 404,
+                          "top": 1528,
+                          "right": 470,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 419,
+                              "top": 1546,
+                              "right": 455,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "File Explorer - 1 running window pinned",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: Microsoft.Windows.Explorer",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 470,
+                          "top": 1528,
+                          "right": 536,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 485,
+                              "top": 1546,
+                              "right": 521,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Microsoft Edge pinned",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: MSEdge",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 536,
+                          "top": 1528,
+                          "right": 602,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 551,
+                              "top": 1546,
+                              "right": 587,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Microsoft Store pinned",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: Microsoft.WindowsStore_8wekyb3d8bbwe!App",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 602,
+                          "top": 1528,
+                          "right": 668,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 617,
+                              "top": 1546,
+                              "right": 653,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Outlook pinned",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: Microsoft.OutlookForWindows_8wekyb3d8bbwe!Microsoft.OutlookforWindows",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 668,
+                          "top": 1528,
+                          "right": 734,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 683,
+                              "top": 1546,
+                              "right": 719,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Copilot pinned",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: Microsoft.Copilot_8wekyb3d8bbwe!App",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 734,
+                          "top": 1528,
+                          "right": 800,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 749,
+                              "top": 1546,
+                              "right": 785,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Google Chrome pinned",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: Chrome",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 800,
+                          "top": 1528,
+                          "right": 866,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 815,
+                              "top": 1546,
+                              "right": 851,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "WPS Office pinned",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: Kingsoft.Office.KPrometheus",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 866,
+                          "top": 1528,
+                          "right": 932,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 881,
+                              "top": 1546,
+                              "right": 917,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Slack - 1 running window pinned",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: com.squirrel.slack.slack",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 932,
+                          "top": 1528,
+                          "right": 998,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 947,
+                              "top": 1546,
+                              "right": 983,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          },
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "OverlayIcon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 966,
+                              "top": 1539,
+                              "right": 990,
+                              "bottom": 1563
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Visual Studio Code - 2 running windows",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: Microsoft.VisualStudioCode",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 998,
+                          "top": 1528,
+                          "right": 1064,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 1013,
+                              "top": 1546,
+                              "right": 1049,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Notepad - 1 running window",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: Microsoft.WindowsNotepad_8wekyb3d8bbwe!App",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 1064,
+                          "top": 1528,
+                          "right": 1130,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 1079,
+                              "top": 1546,
+                              "right": 1115,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Settings - 1 running window",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 1130,
+                          "top": 1528,
+                          "right": 1196,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 1145,
+                              "top": 1546,
+                              "right": 1181,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Active Accessibility Object Inspector (32-bit UNICODE Release) - 1 running window",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: C:\\Users\\Asaad-PC\\Downloads\\Inspect.exe",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 1196,
+                          "top": 1528,
+                          "right": 1262,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 1211,
+                              "top": 1546,
+                              "right": 1247,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Muhammad - Chrome - 1 running window",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: Chrome.UserData.Profile2",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 1262,
+                          "top": 1528,
+                          "right": 1328,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 1277,
+                              "top": 1546,
+                              "right": 1313,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          },
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "OverlayIcon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 1297,
+                              "top": 1539,
+                              "right": 1321,
+                              "bottom": 1563
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Python - 1 running window",
+                        "control_type": "ButtonControl",
+                        "automation_id": "Appid: com.orca.collector",
+                        "class_name": "Taskbar.TaskListButtonAutomationPeer",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 1328,
+                          "top": 1528,
+                          "right": 1394,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "",
+                            "control_type": "ImageControl",
+                            "automation_id": "Icon",
+                            "class_name": "Image",
+                            "localized_control_type": "image",
+                            "bounding_rectangle": {
+                              "left": 1343,
+                              "top": 1546,
+                              "right": 1379,
+                              "bottom": 1582
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Widgets 32°C Mostly clear",
+                        "control_type": "ButtonControl",
+                        "automation_id": "WidgetsButton",
+                        "class_name": "ToggleButton",
+                        "localized_control_type": "button",
+                        "bounding_rectangle": {
+                          "left": 1808,
+                          "top": 1528,
+                          "right": 2036,
+                          "bottom": 1600
+                        },
+                        "clickable_point": null,
+                        "is_enabled": true,
+                        "is_offscreen": false,
+                        "has_keyboard_focus": false,
+                        "children": [
+                          {
+                            "name": "33°C Mostly sunny",
+                            "control_type": "GroupControl",
+                            "automation_id": "",
+                            "class_name": "NamedContainerAutomationPeer",
+                            "localized_control_type": "group",
+                            "bounding_rectangle": {
+                              "left": 1823,
+                              "top": 1534,
+                              "right": 2027,
+                              "bottom": 1594
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": [
+                              {
+                                "name": "",
+                                "control_type": "ImageControl",
+                                "automation_id": "BadgeAnchorLargeTicker",
+                                "class_name": "Image",
+                                "localized_control_type": "image",
+                                "bounding_rectangle": {
+                                  "left": 1828,
+                                  "top": 1545,
+                                  "right": 1864,
+                                  "bottom": 1581
+                                },
+                                "clickable_point": null,
+                                "is_enabled": true,
+                                "is_offscreen": false,
+                                "has_keyboard_focus": false,
+                                "children": []
+                              },
+                              {
+                                "name": "33°C",
+                                "control_type": "TextControl",
+                                "automation_id": "",
+                                "class_name": "TextBlock",
+                                "localized_control_type": "text",
+                                "bounding_rectangle": {
+                                  "left": 1876,
+                                  "top": 1539,
+                                  "right": 1912,
+                                  "bottom": 1563
+                                },
+                                "clickable_point": null,
+                                "is_enabled": true,
+                                "is_offscreen": false,
+                                "has_keyboard_focus": false,
+                                "children": []
+                              },
+                              {
+                                "name": "Mostly sunny",
+                                "control_type": "TextControl",
+                                "automation_id": "",
+                                "class_name": "TextBlock",
+                                "localized_control_type": "text",
+                                "bounding_rectangle": {
+                                  "left": 1876,
+                                  "top": 1563,
+                                  "right": 1981,
+                                  "bottom": 1587
+                                },
+                                "clickable_point": null,
+                                "is_enabled": true,
+                                "is_offscreen": false,
+                                "has_keyboard_focus": false,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "32°C Mostly clear",
+                            "control_type": "GroupControl",
+                            "automation_id": "",
+                            "class_name": "NamedContainerAutomationPeer",
+                            "localized_control_type": "group",
+                            "bounding_rectangle": {
+                              "left": 1823,
+                              "top": 1534,
+                              "right": 2027,
+                              "bottom": 1594
+                            },
+                            "clickable_point": null,
+                            "is_enabled": true,
+                            "is_offscreen": false,
+                            "has_keyboard_focus": false,
+                            "children": [
+                              {
+                                "name": "",
+                                "control_type": "ImageControl",
+                                "automation_id": "BadgeAnchorLargeTicker",
+                                "class_name": "Image",
+                                "localized_control_type": "image",
+                                "bounding_rectangle": {
+                                  "left": 1828,
+                                  "top": 1545,
+                                  "right": 1864,
+                                  "bottom": 1581
+                                },
+                                "clickable_point": null,
+                                "is_enabled": true,
+                                "is_offscreen": false,
+                                "has_keyboard_focus": false,
+                                "children": []
+                              },
+                              {
+                                "name": "32°C",
+                                "control_type": "TextControl",
+                                "automation_id": "",
+                                "class_name": "TextBlock",
+                                "localized_control_type": "text",
+                                "bounding_rectangle": {
+                                  "left": 1876,
+                                  "top": 1539,
+                                  "right": 1912,
+                                  "bottom": 1563
+                                },
+                                "clickable_point": null,
+                                "is_enabled": true,
+                                "is_offscreen": false,
+                                "has_keyboard_focus": false,
+                                "children": []
+                              },
+                              {
+                                "name": "Mostly clear",
+                                "control_type": "TextControl",
+                                "automation_id": "",
+                                "class_name": "TextBlock",
+                                "localized_control_type": "text",
+                                "bounding_rectangle": {
+                                  "left": 1876,
+                                  "top": 1563,
+                                  "right": 1972,
+                                  "bottom": 1587
+                                },
+                                "clickable_point": null,
+                                "is_enabled": true,
+                                "is_offscreen": false,
+                                "has_keyboard_focus": false,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Show Hidden Icons",
+                "control_type": "ButtonControl",
+                "automation_id": "SystemTrayIcon",
+                "class_name": "SystemTray.NormalButton",
+                "localized_control_type": "button",
+                "bounding_rectangle": {
+                  "left": 2139,
+                  "top": 1528,
+                  "right": 2187,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": true,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2151,
+                      "top": 1552,
+                      "right": 2175,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": true,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": " show WPS files sync status",
+                "control_type": "ButtonControl",
+                "automation_id": "NotifyItemIcon",
+                "class_name": "SystemTray.NormalButton",
+                "localized_control_type": "button",
+                "bounding_rectangle": {
+                  "left": 2187,
+                  "top": 1528,
+                  "right": 2235,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "",
+                    "control_type": "ImageControl",
+                    "automation_id": "",
+                    "class_name": "Image",
+                    "localized_control_type": "image",
+                    "bounding_rectangle": {
+                      "left": 2199,
+                      "top": 1552,
+                      "right": 2223,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Your device needs to restart to install updates. \nSelect a time to restart.",
+                "control_type": "ButtonControl",
+                "automation_id": "NotifyItemIcon",
+                "class_name": "SystemTray.NormalButton",
+                "localized_control_type": "button",
+                "bounding_rectangle": {
+                  "left": 2235,
+                  "top": 1528,
+                  "right": 2283,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "",
+                    "control_type": "ImageControl",
+                    "automation_id": "",
+                    "class_name": "Image",
+                    "localized_control_type": "image",
+                    "bounding_rectangle": {
+                      "left": 2247,
+                      "top": 1552,
+                      "right": 2271,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Network SiParadigm\nInternet access",
+                "control_type": "ButtonControl",
+                "automation_id": "SystemTrayIcon",
+                "class_name": "SystemTray.AccentButton",
+                "localized_control_type": "button",
+                "bounding_rectangle": {
+                  "left": 2283,
+                  "top": 1528,
+                  "right": 2325,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2295,
+                      "top": 1552,
+                      "right": 2319,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2295,
+                      "top": 1552,
+                      "right": 2319,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": true,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Volume Speakers (Realtek(R) Audio): 54%",
+                "control_type": "ButtonControl",
+                "automation_id": "SystemTrayIcon",
+                "class_name": "SystemTray.OmniButtonCenter",
+                "localized_control_type": "button",
+                "bounding_rectangle": {
+                  "left": 2325,
+                  "top": 1528,
+                  "right": 2361,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2331,
+                      "top": 1552,
+                      "right": 2355,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2331,
+                      "top": 1552,
+                      "right": 2355,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": true,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Power Battery status: 51% remaining\r\n47min",
+                "control_type": "ButtonControl",
+                "automation_id": "SystemTrayIcon",
+                "class_name": "SystemTray.AccentButton",
+                "localized_control_type": "button",
+                "bounding_rectangle": {
+                  "left": 2361,
+                  "top": 1528,
+                  "right": 2409,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2367,
+                      "top": 1552,
+                      "right": 2397,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2367,
+                      "top": 1552,
+                      "right": 2397,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Clock 7:07 PM\n‎9/‎9/‎2026",
+                "control_type": "ButtonControl",
+                "automation_id": "SystemTrayIcon",
+                "class_name": "SystemTray.OmniButtonLeft",
+                "localized_control_type": "button",
+                "bounding_rectangle": {
+                  "left": 2409,
+                  "top": 1528,
+                  "right": 2500,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "7∶07 PM",
+                    "control_type": "TextControl",
+                    "automation_id": "TimeInnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2421,
+                      "top": 1539,
+                      "right": 2496,
+                      "bottom": 1563
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "‎9/‎9/‎2026",
+                    "control_type": "TextControl",
+                    "automation_id": "DateInnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2421,
+                      "top": 1563,
+                      "right": 2496,
+                      "bottom": 1587
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Notifications 7 new notifications (Do not disturb on)",
+                "control_type": "ButtonControl",
+                "automation_id": "SystemTrayIcon",
+                "class_name": "SystemTray.OmniButtonRight",
+                "localized_control_type": "button",
+                "bounding_rectangle": {
+                  "left": 2500,
+                  "top": 1528,
+                  "right": 2542,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": true,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 2506,
+                      "top": 1552,
+                      "right": 2530,
+                      "bottom": 1576
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": false,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": true,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Show Desktop",
+                "control_type": "ButtonControl",
+                "automation_id": "SystemTrayIcon",
+                "class_name": "SystemTray.ShowDesktopButton",
+                "localized_control_type": "button",
+                "bounding_rectangle": {
+                  "left": 2542,
+                  "top": 1528,
+                  "right": 2560,
+                  "bottom": 1600
+                },
+                "clickable_point": null,
+                "is_enabled": true,
+                "is_offscreen": false,
+                "has_keyboard_focus": false,
+                "children": [
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": true,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": true,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  },
+                  {
+                    "name": "",
+                    "control_type": "TextControl",
+                    "automation_id": "InnerTextBlock",
+                    "class_name": "TextBlock",
+                    "localized_control_type": "text",
+                    "bounding_rectangle": {
+                      "left": 0,
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0
+                    },
+                    "clickable_point": null,
+                    "is_enabled": true,
+                    "is_offscreen": true,
+                    "has_keyboard_focus": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

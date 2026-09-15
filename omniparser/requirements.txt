@@ -1,6 +1,11 @@
 # Core inference stack for the OmniParser parse pipeline
 # (YOLOv9-E icon detection -> OCR -> Florence-2 captioning)
 
+# NOTE: plain `pip install -r` pulls the CPU-only build from PyPI.
+# For an NVIDIA GPU install these from the CUDA index FIRST, e.g. for
+# Blackwell / RTX 50-series (sm_120):
+#   pip install --index-url https://download.pytorch.org/whl/cu130 torch torchvision
+# Then reassert numpy==1.26.4 below, which the torch install upgrades.
 torch
 torchvision
 
@@ -12,10 +17,12 @@ accelerate
 timm
 einops==0.8.0
 
-# OCR
+# OCR (pick one at runtime with --ocr-engine; easyocr is the default/fallback)
 easyocr
 paddlepaddle
 paddleocr
+rapidocr
+onnxruntime    # required: rapidocr >= 2.0.6 no longer bundles an inference engine
 
 # imaging / box handling
 numpy==1.26.4
