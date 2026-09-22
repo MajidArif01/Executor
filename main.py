@@ -1,6 +1,7 @@
+ 
 """Run the whole episode pipeline end to end, from one episode path.
 
-The four stages each already work on a single episode and each take
+The five stages each already work on a single episode and each take
 ``--episode-dir``; this script is the sequencer that runs them in the only
 order that makes sense, since every stage consumes what the previous one wrote:
 
@@ -11,6 +12,10 @@ order that makes sense, since every stage consumes what the previous one wrote:
   3. ``node.py``            match each Typing node's typed string to the element
                             showing it, appended to the same ``timeline.json``
   4. ``click_content.py``   crop the clicks nobody could name into ``base64.json``
+  5. ``Accesibilitytree/    for each mouse click, hit-test its (x, y) against the
+     accessibility_tree.py`` captured accessibility tree in
+                            ``rawdata/accessibility/`` and append the element
+                            under the cursor to ``timeline.json``
 
 Stages 2 and 3 both mutate ``timeline.json`` in place, so they run one after the
 other rather than together. A stage that fails stops the run: stage 2 has
@@ -68,6 +73,12 @@ STAGES = [
         "module": "click_content",
         "title": "Click content: crop the clicks with no name",
         "accepts": {"dry_run"},
+    },
+    {
+        "name": "axtree",
+        "module": "Accesibilitytree.accessibility_tree",
+        "title": "AX tree: click -> element in the captured accessibility tree",
+        "accepts": set(),
     },
 ]
 
