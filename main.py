@@ -1,28 +1,5 @@
- 
-"""Run the whole episode pipeline end to end, from one episode path.
 
-The five stages each already work on a single episode and each take
-``--episode-dir``; this script is the sequencer that runs them in the only
-order that makes sense, since every stage consumes what the previous one wrote:
-
-  1. ``Omniparser_Runner``  parse every typing / click / scroll screenshot into
-                            ``AnotatedData/AnotatedJson/{keyboard,mouse,scroll}/``
-  2. ``mousemapper.py``     match each click and scroll node's (x, y) to the
-                            element under it, appended to ``timeline.json``
-  3. ``node.py``            match each Typing node's typed string to the element
-                            showing it, appended to the same ``timeline.json``
-  4. ``click_content.py``   crop the clicks nobody could name into ``base64.json``
-  5. ``Accesibilitytree/    for each mouse click, hit-test its (x, y) against the
-     accessibility_tree.py`` captured accessibility tree in
-                            ``rawdata/accessibility/`` and append the element
-                            under the cursor to ``timeline.json``
-
-Stages 2 and 3 both mutate ``timeline.json`` in place, so they run one after the
-other rather than together. A stage that fails stops the run: stage 2 has
-nothing to match without stage 1's output, and it would write ``no_json``
-placeholders over a half-parsed episode.
-
-Usage::
+"""
 
     python main.py "D:/My Desktop/Orca_Observation/episode/gourmet-tree"
     python main.py gourmet-tree                      # resolved under EPISODES_ROOT
@@ -77,7 +54,7 @@ STAGES = [
     {
         "name": "axtree",
         "module": "Accesibilitytree.accessibility_tree",
-        "title": "AX tree: click -> element in the captured accessibility tree",
+        "title": "AX tree: click / keypress -> element in the captured accessibility tree",
         "accepts": set(),
     },
 ]
