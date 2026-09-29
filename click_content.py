@@ -1,11 +1,10 @@
-"""Crop the clicks OmniParser couldn't name, as base64 PNGs.
 
-A click node whose ``omniparser.matched_element`` carries no ``content`` -- or
-that matched nothing at all -- tells us nothing about what the user pressed. For
-each of those this script takes the element's bbox (or, with no element, a box
-around the click point), grows it 10x about its center, crops that region out of
-the node's screenshot and stores it base64-encoded in a single ``base64.json``
-keyed by node index, ready to hand to a VLM.
+"""Crop every click node's screenshot, as base64 PNGs.
+
+For each click node this script takes the matched element's bbox (or, with no
+element, a box around the click point), grows it 10x about its center, crops
+that region out of the node's screenshot and stores it base64-encoded in a
+single ``base64.json`` keyed by node index, ready to hand to a VLM.
 
     python click_content.py --episode-dir <EPISODE_ROOT>
     python click_content.py --timeline sample/Calculator.json --episode-dir . --dry-run
@@ -190,7 +189,7 @@ def collect(
     base_radius: int,
     dry_run: bool,
 ) -> tuple[dict, dict]:
-    """Crop every no-content click. Returns (entries, counters)."""
+    """Crop every click node. Returns (entries, counters)."""
     entries: dict[str, dict] = {}
     counts = {"clicks": 0, "no_content": 0, "cropped": 0, "skipped": 0}
     statuses: collections.Counter[str] = collections.Counter()
@@ -199,9 +198,8 @@ def collect(
         if item.get("type") != CLICK_TYPE:
             continue
         counts["clicks"] += 1
-        if not has_no_content(item):
-            continue
-        counts["no_content"] += 1
+        if has_no_content(item):
+            counts["no_content"] += 1
 
         index = item.get("index")
         label = f"node {index}"
