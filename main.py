@@ -54,7 +54,7 @@ STAGES = [
     {
         "name": "axtree",
         "module": "Accesibilitytree.accessibility_tree",
-        "title": "AX tree: click / keypress -> element in the captured accessibility tree",
+        "title": "AX tree: mouse click / typing -> element in the captured accessibility tree",
         "accepts": set(),
     },
 ]
