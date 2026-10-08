@@ -184,14 +184,17 @@ def click_point(item: dict) -> tuple[int, int] | None:
     return int(x), int(y)
 
 
+def normalized_node_type(item: dict) -> str:
+    """Timeline ``type`` with underscores removed, lowercased (``drag_Drop`` -> ``dragdrop``)."""
+    return str(item.get("type") or "").casefold().replace("_", "")
+
+
 def is_mouse_drag(item: dict) -> bool:
     if item.get("kind") == "mouse_drag":
         return True
-    return (
-        item.get("source") == "mouse"
-        and item.get("type") == "click"
-        and item.get("value") == "mouse_drag"
-    )
+    if item.get("source") != "mouse" or item.get("value") != "mouse_drag":
+        return False
+    return normalized_node_type(item) in ("click", "dragdrop")
 
 
 def is_mouse_click(item: dict) -> bool:
@@ -214,7 +217,14 @@ def point_from_side(side: dict) -> tuple[int, int] | None:
 
 
 def parse_drag_points(ev: dict) -> tuple[tuple[int, int], tuple[int, int]] | None:
-    """ORCA detail: 'drag left (x,y) -> (x2,y2), ...' or legacy 'from=(x,y),...'."""
+    """Pick/drop coords from nested ``from``/``to``, detail arrow, or legacy ``from=(x,y)``."""
+    from_side = ev.get("from") if isinstance(ev.get("from"), dict) else {}
+    to_side = ev.get("to") if isinstance(ev.get("to"), dict) else {}
+    pick = point_from_side(from_side)
+    drop = point_from_side(to_side)
+    if pick is not None and drop is not None:
+        return pick, drop
+
     detail = str(ev.get("detail") or "")
     arrow = DRAG_ARROW.search(detail)
     if arrow:
@@ -378,6 +388,29 @@ def drag_side_record(ax_name: str, point: tuple[int, int], hit: dict) -> dict:
     return record
 
 
+def normalize_drag_item_sides(
+    item: dict,
+    pick_pt: tuple[int, int],
+    drop_pt: tuple[int, int],
+    pick_name: str,
+    drop_name: str,
+) -> None:
+    """Ensure top-level ``from``/``to`` carry coords and AX filenames for replay."""
+    ev = (item.get("events") or [{}])[0] if item.get("events") else {}
+    if not isinstance(ev, dict):
+        ev = {}
+    for side, pt, ax_name in (
+        ("from", pick_pt, pick_name),
+        ("to", drop_pt, drop_name),
+    ):
+        event_side = ev.get(side) if isinstance(ev.get(side), dict) else {}
+        existing = item.get(side) if isinstance(item.get(side), dict) else {}
+        merged = {**event_side, **existing}
+        merged["x"], merged["y"] = pt[0], pt[1]
+        merged["accessibility"] = ax_name
+        item[side] = merged
+
+
 def apply_drag_elements(item: dict, result: dict) -> None:
     for side, key in (("from", "pick"), ("to", "drop")):
         hit = result.get(key) or {}
@@ -433,6 +466,7 @@ def accessibility_for_drag(item: dict, ax_dir: Path) -> tuple[dict, str]:
     if drop_snap is None:
         return {"matched": False, "reason": drop_err, "ax_source": drop_ax}, "drag_missing_tree"
 
+    normalize_drag_item_sides(item, pick_pt, drop_pt, pick_name, drop_name)
     result = DragElementFinder().find_drag_elements(pick_snap, drop_snap, pick_pt, drop_pt)
     apply_drag_elements(item, result)
     record = {
