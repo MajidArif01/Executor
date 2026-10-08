@@ -1,12 +1,39 @@
 
-"""Crop every click node's screenshot, as base64 PNGs.
+"""Crop every click and typing node's screenshot, as base64 PNGs.
 
 For each click node this script takes the matched element's bbox (or, with no
-element, a box around the click point), grows it 10x about its center, crops
-that region out of the node's screenshot and stores it base64-encoded in a
-single ``base64.json`` keyed by node index, ready to hand to a VLM.
+element, a box around the click point); for each typing node it takes the
+element showing the typed text (or, with no element, a box around the click
+that focused the field). The box grows outward by 10% per side, is cropped out
+of the node's screenshot and stored base64-encoded in ``base64.json`` beside the
+timeline, ready to hand to a VLM.
+
+Clicks use the screenshot of the display they landed on; typing nodes use their
+last screenshot, the frame after the whole string is in.
+
+The file is rebuilt on every run, one record per node in index order; a node
+that could not be cropped stays in with ``status: skipped`` and its reason::
+
+    {
+      "nodes": [
+        {
+          "index": 7, "type": "Typing",
+          "status": "cropped",            # or "skipped"
+          "skip_reason": null,
+          "match_status": "match",        # the mapper's verdict
+          "content": "settrin| ",         # matched element's text, or null
+          "target": {"value": "setrin", "field_value": "setrin", "anchor": [x, y]},
+                                          # a click: {"click": [x, y]}
+          "screenshot": {"name": "....png", "size": [2560, 1600]},
+          "crop": {"source": "bbox_normalized", "source_bbox": [...],
+                   "box": [...], "size": [w, h]},
+          "image_base64": "iVBORw0..."
+        }
+      ]
+    }
 
     python click_content.py --episode-dir <EPISODE_ROOT>
+    python click_content.py --episode-dir <EPISODE_ROOT> --kind typing --dry-run
     python click_content.py --timeline sample/Calculator.json --episode-dir . --dry-run
 """
 
@@ -22,13 +49,15 @@ from pathlib import Path
 
 from PIL import Image
 
-from Omniparser_Runner.config import CLICK_TYPE, TIMELINE_RELPATH
+from Omniparser_Runner.config import CLICK_TYPE, TIMELINE_RELPATH, TYPING_TYPE
 from Omniparser_Runner.timeline_reader import (
     load_timeline,
     pick_event_image,
+    pick_last_image,
     resolve_image,
 )
 from mousemapper import NEAREST_RADIUS_PX
+from node import field_context
 
 # Grow the source bbox outward on every side by this fraction of its own
 # width/height before cropping (0.10 => each edge moves out 10%).
@@ -39,6 +68,13 @@ OUTPUT_NAME = "base64.json"
 # Status we record for a click the mapper never touched, so an un-enriched
 # episode is distinguishable from one the mapper looked at and gave up on.
 NO_OMNIPARSER = "no_omniparser"
+
+# Which timeline node types each --kind selects.
+KINDS = {
+    "click": frozenset({CLICK_TYPE}),
+    "typing": frozenset({TYPING_TYPE}),
+    "all": frozenset({CLICK_TYPE, TYPING_TYPE}),
+}
 
 
 # --------------------------------------------------------------------------- #
@@ -82,17 +118,53 @@ def click_point(item: dict) -> tuple[int, int] | None:
     return int(x), int(y)
 
 
+def typing_anchor(
+    item: dict,
+    context_anchor: tuple[float, float] | None,
+) -> tuple[float, float] | None:
+    """The normalized click that focused a typing node's field.
+
+    The matcher records it in ``match_query.anchor``; a node it never touched
+    falls back to the anchor rebuilt from the timeline by ``field_context``.
+    """
+    anchor = ((item.get("omniparser") or {}).get("match_query") or {}).get("anchor")
+    if isinstance(anchor, (list, tuple)) and len(anchor) == 2:
+        return float(anchor[0]), float(anchor[1])
+    return context_anchor
+
+
+def typing_point(
+    item: dict,
+    image_size: tuple[int, int],
+    context_anchor: tuple[float, float] | None,
+) -> tuple[int, int] | None:
+    """Where a typing node's field is, in pixels: its anchor scaled by the image."""
+    anchor = typing_anchor(item, context_anchor)
+    if anchor is None:
+        return None
+    width, height = image_size
+    return int(round(anchor[0] * width)), int(round(anchor[1] * height))
+
+
+def typed_value(item: dict) -> str:
+    """The whole field the matcher looked for, else this node's own fragment."""
+    query = (item.get("omniparser") or {}).get("match_query") or {}
+    return query.get("field_value") or item.get("value") or ""
+
 
 def source_bbox(
     item: dict,
     image_size: tuple[int, int],
     base_radius: int,
+    point: tuple[int, int] | None,
+    point_origin: str,
 ) -> tuple[tuple[float, float, float, float], str] | None:
     """The box to grow, in pixels, plus where it came from.
 
     Prefers the matched element's own pixel bbox, falls back to its normalized
     bbox scaled by the image, and finally -- no element at all -- to a small box
-    centred on the click point.
+    centred on ``point`` (the click, or the click that focused a typed field),
+    labelled ``point_origin``.
     """
     matched = (item.get("omniparser") or {}).get("matched_element") or {}
     width, height = image_size
@@ -113,12 +185,11 @@ def source_bbox(
         )
         return box, "bbox_normalized"
 
-    point = click_point(item)
     if point is None:
         return None
     x, y = point
     box = (x - base_radius, y - base_radius, x + base_radius, y + base_radius)
-    return box, "click_point"
+    return box, point_origin
 
 
 def pad_about_center(
@@ -153,12 +224,17 @@ def pad_about_center(
 # --------------------------------------------------------------------------- #
 
 def screenshot_for(item: dict, episode_dir: Path) -> Path | None:
-    """The screenshot the click landed on, resolved against this machine.
+    """The node's screenshot, resolved against this machine.
 
-    Timelines captured elsewhere carry absolute paths from that machine, so the
-    episode-relative path wins and the absolute one is only a fallback.
+    A click uses the display it landed on; a typing node uses its last frame,
+    the one the matcher parsed. Timelines captured elsewhere carry absolute
+    paths from that machine, so the episode-relative path wins and the absolute
+    one is only a fallback.
     """
-    image, _matched = pick_event_image(item)
+    if item.get("type") == TYPING_TYPE:
+        image = pick_last_image(item)
+    else:
+        image, _matched = pick_event_image(item)
     if image is not None:
         candidate = resolve_image(episode_dir, image)
         if candidate.is_file():
@@ -182,46 +258,98 @@ def encode_png(image: Image.Image) -> str:
 # Main pass
 # --------------------------------------------------------------------------- #
 
+def matched_content(item: dict) -> str | None:
+    """The OCR / caption text of the element the node matched, if any."""
+    matched = (item.get("omniparser") or {}).get("matched_element") or {}
+    content = matched.get("content")
+    return content if isinstance(content, str) and content.strip() else None
+
+
+def node_record(item: dict, status: str) -> dict:
+    """One node's entry with every key present, filled in as the crop proceeds.
+
+    Click and typing nodes share this shape; only ``target`` differs, so a
+    consumer can read every node the same way.
+    """
+    return {
+        "index": item.get("index"),
+        "type": item.get("type"),
+        "status": "skipped",
+        "skip_reason": None,
+        "match_status": status,
+        "content": matched_content(item),
+        "target": {},
+        "screenshot": None,
+        "crop": None,
+        "image_base64": None,
+    }
+
+
 def collect(
     timeline: dict,
     episode_dir: Path,
     pad_frac: float,
     base_radius: int,
     dry_run: bool,
-) -> tuple[dict, dict]:
-    """Crop every click node. Returns (entries, counters)."""
-    entries: dict[str, dict] = {}
-    counts = {"clicks": 0, "no_content": 0, "cropped": 0, "skipped": 0}
+    node_types: frozenset[str] = KINDS["all"],
+) -> tuple[list[dict], dict]:
+    """Crop every selected click / typing node. Returns (nodes, counters).
+
+    Every selected node gets a record, in timeline order -- a node that could
+    not be cropped is kept with ``status: skipped`` and the reason, rather than
+    silently left out.
+    """
+    nodes: list[dict] = []
+    counts = {"clicks": 0, "typing": 0, "no_content": 0, "cropped": 0, "skipped": 0}
     statuses: collections.Counter[str] = collections.Counter()
 
-    for item in timeline.get("items", []):
-        if item.get("type") != CLICK_TYPE:
+    items = timeline.get("items", [])
+    # Rebuilds the focusing click for typing nodes the matcher never touched.
+    context = field_context(items) if TYPING_TYPE in node_types else {}
+
+    for item in items:
+        node_type = item.get("type")
+        if node_type not in node_types:
             continue
-        counts["clicks"] += 1
+        is_typing = node_type == TYPING_TYPE
+        counts["typing" if is_typing else "clicks"] += 1
         if has_no_content(item):
             counts["no_content"] += 1
 
         index = item.get("index")
-        label = f"node {index}"
+        label = f"node {index} ({node_type})"
         omni = item.get("omniparser") or {}
         status = match_status(item)
         statuses[status] += 1
 
+        record = node_record(item, status)
+        nodes.append(record)
+        anchor = None
+        if is_typing:
+            anchor = typing_anchor(item, (context.get(index) or {}).get("anchor"))
+            record["target"] = {
+                "value": item.get("value") or "",
+                "field_value": typed_value(item),
+                "anchor": list(anchor) if anchor else None,
+            }
+        else:
+            record["target"] = {"click": list(click_point(item) or []) or None}
+
+        def skip(reason: str) -> None:
+            print(f"warning: {label}: {reason}, skipping.", file=sys.stderr)
+            record["skip_reason"] = reason
+            counts["skipped"] += 1
+
         path = screenshot_for(item, episode_dir)
         if path is None:
-            print(f"warning: {label}: screenshot not found, skipping.", file=sys.stderr)
-            counts["skipped"] += 1
+            skip("screenshot not found")
             continue
 
         try:
             with Image.open(path) as handle:
                 image = handle.convert("RGB")
         except OSError as exc:
-            print(
-                f"warning: {label}: cannot read {path} ({exc}), skipping.",
-                file=sys.stderr,
-            )
-            counts["skipped"] += 1
+            skip(f"cannot read {path.name} ({exc})")
             continue
 
         # The recorded size is what OmniParser normalized against; trust the
@@ -231,72 +359,94 @@ def collect(
         if isinstance(recorded, (list, tuple)) and len(recorded) == 2:
             if tuple(recorded) == image.size:
                 size = tuple(recorded)
+        record["screenshot"] = {"name": path.name, "size": list(size)}
 
-        found = source_bbox(item, size, base_radius)
+        if is_typing:
+            point = typing_point(item, size, anchor)
+            point_origin = "typing_anchor"
+        else:
+            point = click_point(item)
+            point_origin = "click_point"
+
+        found = source_bbox(item, size, base_radius, point, point_origin)
         if found is None:
-            print(f"warning: {label}: no bbox and no click point, skipping.", file=sys.stderr)
-            counts["skipped"] += 1
+            skip(f"no bbox and no {point_origin}")
             continue
         box, origin = found
 
         crop_box = pad_about_center(box, pad_frac, size)
         if crop_box is None:
-            print(
-                f"warning: {label}: crop falls outside the image, skipping.",
-                file=sys.stderr,
-            )
-            counts["skipped"] += 1
+            skip("crop falls outside the image")
             continue
 
-        entry = {
-            "node_index": index,
-            "image": path.name,
-            "image_size": list(size),
-            "click": list(click_point(item) or []),
-            "bbox_source": origin,
+        record["crop"] = {
+            "source": origin,
             "source_bbox": [int(round(v)) for v in box],
-            "crop_box": list(crop_box),
-            "crop_size": [crop_box[2] - crop_box[0], crop_box[3] - crop_box[1]],
-            "match_status": status,
+            "box": list(crop_box),
+            "size": [crop_box[2] - crop_box[0], crop_box[3] - crop_box[1]],
         }
-
-        if dry_run:
-            print(
-                f"{label}: [{status}] {origin} {entry['source_bbox']} -> "
-                f"crop {entry['crop_box']} "
-                f"({entry['crop_size'][0]}x{entry['crop_size'][1]}) from {path.name}"
-            )
-        else:
-            entry["base64"] = encode_png(image.crop(crop_box))
-            entries[str(index)] = entry
-
+        record["status"] = "cropped"
         counts["cropped"] += 1
 
+        if dry_run:
+            crop = record["crop"]
+            print(
+                f"{label}: [{status}] {origin} {crop['source_bbox']} -> "
+                f"crop {crop['box']} ({crop['size'][0]}x{crop['size'][1]}) "
+                f"from {path.name}"
+            )
+        else:
+            record["image_base64"] = encode_png(image.crop(crop_box))
+
     counts["statuses"] = dict(statuses)
-    return entries, counts
+    return nodes, counts
 
 
-def write_entries(out_path: Path, entries: dict) -> None:
-    """Merge into any existing file so a second episode doesn't clobber the first."""
-    existing: dict = {}
+def sort_key(node: dict) -> tuple[int, int]:
+    index = node.get("index")
+    return (0, index) if isinstance(index, int) else (1, 0)
+
+
+def write_output(
+    out_path: Path,
+    nodes: list[dict],
+    node_types: frozenset[str],
+) -> list[dict]:
+    """Write the episode's crops, rebuilt from scratch, nodes in index order.
+
+    The file always reflects one run, so stale entries from older runs or
+    settings never linger. The one exception: a ``--kind`` run that covers only
+    some node types keeps the other types' nodes from the existing file, so
+    ``--kind typing`` does not wipe the clicks. Returns the nodes written.
+    """
+    kept: list[dict] = []
     if out_path.is_file():
         try:
             loaded = json.loads(out_path.read_text(encoding="utf-8"))
-            if isinstance(loaded, dict):
-                existing = loaded
         except json.JSONDecodeError:
             print(f"warning: {out_path} is not valid JSON, overwriting.", file=sys.stderr)
+            loaded = None
+        # Only this layout carries a ``nodes`` list; anything older is rebuilt.
+        if isinstance(loaded, dict) and isinstance(loaded.get("nodes"), list):
+            kept = [
+                node for node in loaded["nodes"]
+                if isinstance(node, dict) and node.get("type") not in node_types
+            ]
 
-    existing.update(entries)
-    out_path.write_text(json.dumps(existing, indent=2), encoding="utf-8")
+    merged = sorted(kept + nodes, key=sort_key)
+    payload = {"nodes": merged}
+    out_path.write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    return merged
 
 
 # --------------------------------------------------------------------------- #
 # Audit
 # --------------------------------------------------------------------------- #
 
-def audit(episodes_root: Path) -> int:
-    """Report which episodes' timelines have clicks the mapper never touched.
+def audit(episodes_root: Path, node_types: frozenset[str] = KINDS["all"]) -> int:
+    """Report which episodes' timelines have nodes the mappers never touched.
 
     Answers the question this script exists to serve: before cropping anything,
     which timelines are simply un-enriched?
@@ -322,7 +472,7 @@ def audit(episodes_root: Path) -> int:
         statuses: collections.Counter[str] = collections.Counter()
         clicks = 0
         for item in timeline.get("items", []):
-            if item.get("type") != CLICK_TYPE:
+            if item.get("type") not in node_types:
                 continue
             clicks += 1
             statuses[match_status(item)] += 1
@@ -332,13 +482,13 @@ def audit(episodes_root: Path) -> int:
     for name, clicks, bare, statuses in rows:
         flag = "  <-- no omniparser data" if bare else ""
         breakdown = ", ".join(f"{k}: {v}" for k, v in sorted(statuses.items()))
-        print(f"{name:28} {clicks:5} clicks  {breakdown}{flag}")
+        print(f"{name:28} {clicks:5} nodes  {breakdown}{flag}")
 
     if missing_timeline:
         print(f"\nno {TIMELINE_RELPATH} at all: {', '.join(missing_timeline)}")
     print(
-        f"\n{len(unenriched)}/{len(rows)} timelines have clicks with no omniparser "
-        f"block ({sum(row[2] for row in unenriched)} clicks total)."
+        f"\n{len(unenriched)}/{len(rows)} timelines have nodes with no omniparser "
+        f"block ({sum(row[2] for row in unenriched)} nodes total)."
     )
     return 0
 
@@ -358,6 +508,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "Report which episodes' timelines have clicks with no omniparser "
             "data, then exit. Nothing is cropped or written."
         ),
+    )
+    parser.add_argument(
+        "--kind",
+        choices=sorted(KINDS),
+        default="all",
+        help="Which nodes to crop: click, typing or all (default: all).",
     )
     parser.add_argument(
         "--timeline",
@@ -381,7 +537,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         type=int,
         default=NEAREST_RADIUS_PX,
         help=(
-            "Half-size of the box used when a click matched nothing "
+            "Half-size of the box used when a click or typing node matched nothing "
             f"(default: {NEAREST_RADIUS_PX})."
         ),
     )
@@ -395,9 +551,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
+    node_types = KINDS[args.kind]
 
     if args.audit is not None:
-        return audit(args.audit.resolve())
+        return audit(args.audit.resolve(), node_types)
 
     if args.episode_dir is None:
         print("error: --episode-dir is required (or use --audit).", file=sys.stderr)
@@ -413,15 +570,18 @@ def main(argv: list[str] | None = None) -> int:
         print(f"error: {exc}", file=sys.stderr)
         return 1
 
-    entries, counts = collect(
-        timeline, episode_dir, args.pad_frac, args.base_radius, args.dry_run
+    nodes, counts = collect(
+        timeline, episode_dir, args.pad_frac, args.base_radius, args.dry_run,
+        node_types,
     )
 
-    if entries:
-        write_entries(out_path, entries)
+    written: list[dict] = []
+    if not args.dry_run:
+        written = write_output(out_path, nodes, node_types)
 
     print(
-        f"{counts['clicks']} clicks scanned, {counts['no_content']} without content, "
+        f"{counts['clicks']} clicks and {counts['typing']} typing nodes scanned, "
+        f"{counts['no_content']} without content, "
         f"{counts['cropped']} cropped, {counts['skipped']} skipped."
     )
     if counts["statuses"]:
@@ -431,14 +591,12 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  by status -- {breakdown}")
     if counts["statuses"].get(NO_OMNIPARSER):
         print(
-            f"  note: {counts['statuses'][NO_OMNIPARSER]} clicks carry no omniparser "
-            f"block at all -- run the mapper over {timeline_path.name} first if you "
-            f"wanted real bboxes rather than click-point boxes."
+            f"  note: {counts['statuses'][NO_OMNIPARSER]} nodes carry no omniparser "
+            f"block at all -- run mousemapper.py / node.py over {timeline_path.name} "
+            f"first if you wanted real bboxes rather than point boxes."
         )
-    if entries:
-        print(f"wrote {len(entries)} entries to {out_path}")
-    elif not args.dry_run and counts["no_content"]:
-        print("nothing written.")
+    if not args.dry_run:
+        print(f"wrote {len(written)} nodes to {out_path}")
 
     return 0
 
