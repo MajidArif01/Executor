@@ -146,10 +146,10 @@ def typing_point(
     return int(round(anchor[0] * width)), int(round(anchor[1] * height))
 
 
-def typed_value(item: dict) -> str:
+def typed_value(item: dict, context_value: str = "") -> str:
     """The whole field the matcher looked for, else this node's own fragment."""
     query = (item.get("omniparser") or {}).get("match_query") or {}
-    return query.get("field_value") or item.get("value") or ""
+    return query.get("field_value") or context_value or item.get("value") or ""
 
 
 def source_bbox(
@@ -329,7 +329,7 @@ def collect(
             anchor = typing_anchor(item, (context.get(index) or {}).get("anchor"))
             record["target"] = {
                 "value": item.get("value") or "",
-                "field_value": typed_value(item),
+                "field_value": typed_value(item, (context.get(index) or {}).get("typed", "")),
                 "anchor": list(anchor) if anchor else None,
             }
         else:
@@ -505,7 +505,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         type=Path,
         metavar="EPISODES_ROOT",
         help=(
-            "Report which episodes' timelines have clicks with no omniparser "
+            "Report which episodes' timelines have click or typing nodes with no omniparser "
             "data, then exit. Nothing is cropped or written."
         ),
     )
