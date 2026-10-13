@@ -9,8 +9,9 @@ key.
 This module owns the files: reading the timeline and AX captures, shaping the
 record stored for each item, and saving the timeline. The algorithms live in:
     ClickElement.py        find_element(capture, x, y)  -> element under the click
-    TypingElement.py       find_typing_field(capture)   -> focused text-entry field
+    TypingElement.py       TypingFieldFinder(capture)   -> focused text-entry field
     find_drag_elements.py  DragElementFinder            -> pick/drop under drag points
+    records.py             one dataclass per modality   -> the stored "accessibility" block
 
 Layout assumed for an episode directory:
     <episode>/processdata/timeline.json
@@ -47,7 +48,6 @@ stripped, names the AX file), and TypingElement's saved report is stored:
         "ax_source": "20260929_132743_045512_accessibility.json",
         "matched": true,                      <- status == inferred_target
         "typed": {"value": "1234", "last_char_time": "2026-09-29T13:27:43.045512"},
-        "status": "inferred_target", "reason": "...",
         "window_context": { ...same shape as a click... },
         "target": { ...focused text field, TypingElement's saved target... },
         "ancestor_chain": [ ...same shape as a click: root (level 0) -> target... ]
@@ -70,13 +70,13 @@ from pathlib import Path
 # Allow running both as a module (python -m) and as a script.
 try:
     from .ClickElement import _build_result, find_element, parse_resolution
-    from .TypingElement import build_report, find_typing_field
+    from .Scrolling import find_scroll_target, scroll_delta
+    from .TypingElement import TypingFieldFinder, TypingResult
     from .find_drag_elements import DragElementFinder
-except ImportError:  # pragma: no cover - direct-script fallback
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-    from Accesibilitytree.ClickElement import _build_result, find_element, parse_resolution
-    from Accesibilitytree.TypingElement import build_report, find_typing_field
-    from Accesibilitytree.find_drag_elements import DragElementFinder
+    from .records import (ClickPoint, ClickRecord, DragPoint, DragRecord, DragSide, Miss,
+                          ScrollDelta, ScrollMiss, ScrollRecord, TypedText, TypingRecord, to_json)
+except ImportError:
+    raise
 
 
 # ── path resolution ────────────────────────────────────────────────────
@@ -151,7 +151,7 @@ def prefix_from_item(item: dict, last: bool = False) -> str | None:
 
     # Fallback: build from an ISO timestamp -> YYYYMMDD_HHMMSS_ffffff
     events = item.get("events") or []
-    candidates = [item.get("time"), item.get("timestamp")]
+    candidates = [events[0].get("timestamp") if events else None, item.get("starttime"), item.get("time"), item.get("timestamp")]
     if last:
         candidates += [events[-1].get("timestamp") if events else None, item.get("endtime")]
     for time_str in candidates:
@@ -184,17 +184,12 @@ def click_point(item: dict) -> tuple[int, int] | None:
     return int(x), int(y)
 
 
-def normalized_node_type(item: dict) -> str:
-    """Timeline ``type`` with underscores removed, lowercased (``drag_Drop`` -> ``dragdrop``)."""
-    return str(item.get("type") or "").casefold().replace("_", "")
-
-
 def is_mouse_drag(item: dict) -> bool:
     if item.get("kind") == "mouse_drag":
         return True
     if item.get("source") != "mouse" or item.get("value") != "mouse_drag":
         return False
-    return normalized_node_type(item) in ("click", "dragdrop")
+    return str(item.get("type") or "").casefold().replace("_", "") in ("click", "dragdrop")
 
 
 def is_mouse_click(item: dict) -> bool:
@@ -314,77 +309,59 @@ def load_named_capture(
 
 # ── the stored "accessibility" block ────────────────────────────────────
 
-def matched_record(ax_name: str, x: int, y: int, found: dict) -> dict:
-    return {
-        "ax_source": ax_name,
-        "matched": True,
-        "click": {"x": x, "y": y, "normalized": found["click"]["normalized"]},
-        "hit_layer": found["hit_layer"],
-        "window_context": found["window_context"],
-        "target": found["target"],
-        "ancestor_chain": found["ancestor_chain"],
-    }
+def matched_record(ax_name: str, x: int, y: int, found: dict) -> ClickRecord:
+    return ClickRecord(
+        ax_source=ax_name,
+        click=ClickPoint(x=x, y=y, normalized=found["click"]["normalized"]),
+        hit_layer=found["hit_layer"],
+        window_context=found["window_context"],
+        target=found["target"],
+        ancestor_chain=found["ancestor_chain"],
+    )
 
 
-CHILD_INDEX = re.compile(r"\.children\[(\d+)\]")
-
-
-def nodes_on_path(tree: dict, json_path: str) -> list[dict]:
-    """Root -> node list for a TypingElement json_path such as
-    '$.tree.children[1].children[0]'."""
-    nodes = [tree]
-    for index in CHILD_INDEX.findall(json_path):
-        nodes.append(nodes[-1]["children"][int(index)])
-    return nodes
-
-
-def typing_record(ax_name: str, item: dict, capture: dict, result: dict) -> dict:
+def typing_record(ax_name: str, item: dict, result: TypingResult) -> TypingRecord:
     """Typing block: TypingElement's target as-is, with window_context and
     ancestor_chain in the same shape as a click record (level 0 = root)."""
     events = item.get("events") or []
-    report = build_report(result, source_file=ax_name)
-    record = {
-        "ax_source": ax_name,
-        "matched": result["status"] == "inferred_target",
-        "typed": {
-            "value": item.get("value"),
-            "last_char_time": events[-1].get("timestamp") if events else item.get("endtime"),
-        },
-        "status": report["detection"]["status"],
-        "reason": report["detection"]["reason"],
-        "window_context": None,
-        "target": report["target"],
-        "ancestor_chain": [],
-    }
-    if report["target"]:
-        chain = nodes_on_path(capture["tree"], report["target"]["json_path"])
+    record = TypingRecord(
+        ax_source=ax_name,
+        matched=result.status == "inferred_target",
+        typed=TypedText(
+            value=item.get("value"),
+            last_char_time=events[-1].get("timestamp") if events else item.get("endtime"),
+        ),
+        target=result.target,
+    )
+    if result.chain:
+        chain = result.chain
         click_style = _build_result({"element": chain[-1], "parent_chain": chain, "layer": None})
-        record["window_context"] = click_style["window_context"]
-        record["ancestor_chain"] = click_style["ancestor_chain"]
+        record.window_context = click_style["window_context"]
+        record.ancestor_chain = click_style["ancestor_chain"]
     return record
 
 
 def unmatched_record(reason: str, ax_name: str | None = None,
-                     point: tuple[int, int] | None = None, typing: bool = False) -> dict:
+                     point: tuple[int, int] | None = None, typing: bool = False) -> Miss:
     """A miss. A click miss without a point has no capture to name either;
     a typing miss always names the capture it looked for."""
-    record = {"matched": False, "reason": reason}
+    record = Miss(reason=reason)
     if point is not None or typing:
-        record["ax_source"] = ax_name
+        record.ax_source = ax_name
     if point is not None:
-        record["click"] = {"x": point[0], "y": point[1]}
+        record.click = ClickPoint(x=point[0], y=point[1])
     return record
 
 
-def drag_side_record(ax_name: str, point: tuple[int, int], hit: dict) -> dict:
-    record = {
-        "ax_source": ax_name,
-        "point": {"x": point[0], "y": point[1]},
-        "status": hit.get("status"),
-        "element": hit.get("element"),
-    }
+def drag_side_record(ax_name: str, point: tuple[int, int], hit: dict) -> DragSide:
+    record = DragSide(
+        ax_source=ax_name,
+        point=DragPoint(x=point[0], y=point[1]),
+        status=hit.get("status"),
+        element=hit.get("element"),
+    )
     if hit.get("status") == "ambiguous":
-        record["candidates"] = hit.get("candidates") or []
+        record.candidates = hit.get("candidates") or []
     return record
 
 
@@ -435,7 +412,7 @@ def drag_outcome_stat(result: dict) -> str:
     return "drag_partial"
 
 
-def accessibility_for_click(item: dict, ax_dir: Path) -> tuple[dict, str]:
+def accessibility_for_click(item: dict, ax_dir: Path) -> tuple[ClickRecord | Miss, str]:
     """Resolve one click item to (record to store, stats key)."""
     pt = click_point(item)
     if pt is None:
@@ -454,26 +431,44 @@ def accessibility_for_click(item: dict, ax_dir: Path) -> tuple[dict, str]:
     return matched_record(ax_name, pt[0], pt[1], found), "matched"
 
 
-def accessibility_for_drag(item: dict, ax_dir: Path) -> tuple[dict, str]:
+def accessibility_for_scroll(item: dict, ax_dir: Path) -> tuple[ScrollRecord | ScrollMiss, str]:
+    point = click_point(item)
+    dx, dy = scroll_delta(item)
+    delta = ScrollDelta(dx=dx, dy=dy)
+    screen = (item.get("events") or [{}])[0].get("screen")
+    if point is None:
+        return ScrollMiss(scroll=delta, screen=screen, reason="no scroll coordinates"), "scroll_no_point"
+    capture, ax_name, reason = load_capture(item, ax_dir)
+    if capture is None:
+        return ScrollMiss(scroll=delta, screen=screen, reason=reason, ax_source=ax_name), "scroll_missing_tree"
+    found = find_scroll_target(capture, *point,
+        click_space=parse_resolution(item["events"][0].get("screen_resolution")), dx=dx, dy=dy)
+    if found is None:
+        return ScrollMiss(scroll=delta, screen=screen, reason="no element under scroll cursor",
+                          ax_source=ax_name), "scroll_no_match"
+    return ScrollRecord(scroll=delta, screen=screen, ax_source=ax_name, **found), "scroll_matched"
+
+
+def accessibility_for_drag(item: dict, ax_dir: Path) -> tuple[DragRecord | Miss, str]:
     pick_pt, drop_pt, pick_name, drop_name, reason = drag_pick_drop(item)
     if reason:
-        return {"matched": False, "reason": reason}, "drag_no_point"
+        return Miss(reason=reason), "drag_no_point"
 
     pick_snap, pick_ax, pick_err = load_named_capture(ax_dir, pick_name)
     if pick_snap is None:
-        return {"matched": False, "reason": pick_err, "ax_source": pick_ax}, "drag_missing_tree"
+        return Miss(reason=pick_err, ax_source=pick_ax), "drag_missing_tree"
     drop_snap, drop_ax, drop_err = load_named_capture(ax_dir, drop_name)
     if drop_snap is None:
-        return {"matched": False, "reason": drop_err, "ax_source": drop_ax}, "drag_missing_tree"
+        return Miss(reason=drop_err, ax_source=drop_ax), "drag_missing_tree"
 
     normalize_drag_item_sides(item, pick_pt, drop_pt, pick_name, drop_name)
     result = DragElementFinder().find_drag_elements(pick_snap, drop_snap, pick_pt, drop_pt)
     apply_drag_elements(item, result)
-    record = {
-        "matched": drag_outcome_stat(result) == "drag_matched",
-        "pick": drag_side_record(pick_ax, pick_pt, result["pick"]),
-        "drop": drag_side_record(drop_ax, drop_pt, result["drop"]),
-    }
+    record = DragRecord(
+        matched=drag_outcome_stat(result) == "drag_matched",
+        pick=drag_side_record(pick_ax, pick_pt, result["pick"]),
+        drop=drag_side_record(drop_ax, drop_pt, result["drop"]),
+    )
     return record, drag_outcome_stat(result)
 
 
@@ -484,17 +479,17 @@ TYPING_STATUS_STAT = {
 }
 
 
-def accessibility_for_typing(item: dict, ax_dir: Path) -> tuple[dict, str]:
+def accessibility_for_typing(item: dict, ax_dir: Path) -> tuple[TypingRecord | Miss, str]:
     """Resolve one typing item, using the capture of its last typed character,
     to (record to store, stats key)."""
     capture, ax_name, reason = load_capture(item, ax_dir, last=True)
     if capture is None:
         return unmatched_record(reason, ax_name, typing=True), "typing_missing_tree"
     try:
-        result = find_typing_field(capture)
+        result = TypingFieldFinder(capture).find()
     except ValueError as exc:  # e.g. ax_tree_available == false
         return unmatched_record(str(exc), ax_name, typing=True), "typing_missing_tree"
-    return typing_record(ax_name, item, capture, result), TYPING_STATUS_STAT[result["status"]]
+    return typing_record(ax_name, item, result), TYPING_STATUS_STAT[result.status]
 
 
 # ── writing ─────────────────────────────────────────────────────────────
@@ -515,6 +510,7 @@ def save_timeline(timeline_path: Path, timeline: dict) -> Path:
 def enrich(timeline_path: Path, ax_dir: Path) -> dict:
     timeline = read_json(timeline_path)
     stats = {
+        "scrolls": 0, "scroll_matched": 0, "scroll_no_point": 0, "scroll_missing_tree": 0, "scroll_no_match": 0,
         "clicks": 0, "matched": 0, "no_match": 0, "missing_tree": 0, "no_point": 0,
         "drags": 0, "drag_matched": 0, "drag_ambiguous": 0, "drag_no_match": 0,
         "drag_partial": 0, "drag_missing_tree": 0, "drag_no_point": 0,
@@ -525,15 +521,19 @@ def enrich(timeline_path: Path, ax_dir: Path) -> dict:
     for item in timeline.get("items", []):
         if is_mouse_drag(item):
             stats["drags"] += 1
-            item["accessibility"], outcome = accessibility_for_drag(item, ax_dir)
+            record, outcome = accessibility_for_drag(item, ax_dir)
         elif is_mouse_click(item):
             stats["clicks"] += 1
-            item["accessibility"], outcome = accessibility_for_click(item, ax_dir)
+            record, outcome = accessibility_for_click(item, ax_dir)
+        elif item.get("type") == "scroll":
+            stats["scrolls"] += 1
+            record, outcome = accessibility_for_scroll(item, ax_dir)
         elif is_typing(item):
             stats["typing"] += 1
-            item["accessibility"], outcome = accessibility_for_typing(item, ax_dir)
+            record, outcome = accessibility_for_typing(item, ax_dir)
         else:
             continue
+        item["accessibility"] = to_json(record)
         stats[outcome] += 1
 
     stats["backup"] = str(save_timeline(timeline_path, timeline))
@@ -585,6 +585,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  partial            : {stats['drag_partial']}")
     print(f"  missing AX tree    : {stats['drag_missing_tree']}")
     print(f"  bad/missing coords : {stats['drag_no_point']}")
+    print(f"Scroll items found : {stats['scrolls']} (matched: {stats['scroll_matched']})")
     print(f"Typing items found : {stats['typing']}")
     print(f"  matched           : {stats['typing_matched']}")
     print(f"  ambiguous          : {stats['typing_ambiguous']}")

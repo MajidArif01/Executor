@@ -1,10 +1,20 @@
-"""Accessibility tree coordinate matching.
+"""Accessibility tree element matching.
 
-Hit-test a click point against a captured accessibility tree and, for a whole
-episode, append the element under each mouse click onto ``timeline.json``.
+Find the element a mouse click landed on (``ClickElement``) and the text field
+a typed string went into (``TypingElement``); for a whole episode, append both
+onto ``timeline.json`` (``accessibility_tree.enrich``).
 """
 
 from .accessibility_tree import enrich
-from .find_element import find_element, find_elements, load_tree
+from .ClickElement import find_element, find_elements, load_tree
+from .TypingElement import TypingFieldFinder
+from .find_drag_elements import DragElementFinder
 
-__all__ = ["find_element", "find_elements", "load_tree", "enrich"]
+__all__ = [
+    "find_element",
+    "find_elements",
+    "load_tree",
+    "TypingFieldFinder",
+    "DragElementFinder",
+    "enrich",
+]
