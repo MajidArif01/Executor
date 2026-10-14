@@ -32,7 +32,7 @@ Incremental SOLID refactor of a Windows UI automation and replay system. Safety 
 Plans:
 **Wave 1**
 
-- [ ] 01-01-PLAN.md - Commit working tree baseline, update .gitignore
+- [x] 01-01-PLAN.md - Commit working tree baseline, update .gitignore
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -115,7 +115,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Safety Net and Hygiene | 0/TBD | Not started | - |
+| 1. Safety Net and Hygiene | 1/8 | In progress | - |
 | 2. Domain Types and Ports | 0/TBD | Not started | - |
 | 3. Action Registry and ReplayEngine | 0/TBD | Not started | - |
 | 4. AX Layer Split | 0/TBD | Not started | - |
