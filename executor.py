@@ -30,7 +30,7 @@ MINIMIZE_WINDOWS_FIRST = False  # press Win+D to show the desktop before step 1
 # Timeline-recording options (ignored for the flat-list input shape)
 TARGET_RESOLUTION = None     # (width, height) to scale recorded coords onto;
                              # None = auto-detect this screen via PyAutoGUI
-SCROLL_UNITS_PER_NOTCH = 120  # PyAutoGUI wheel units per recorded scroll notch.
+SCROLL_UNITS_PER_NOTCH = 1  # PyAutoGUI accepts notches.
                               # Windows passes this straight to mouse_event as
                               # dwData, where one wheel notch is WHEEL_DELTA=120.
 COALESCE_SCROLLS = False     # merge a run of identical wheel notches into one
@@ -122,24 +122,9 @@ def _scale_point(
     )
 
 
-def _scroll_notches(item: dict[str, Any]) -> tuple[int, int]:
-    """Return one item's wheel delta as (dx_notches, dy_notches)."""
-    omni = item.get("omniparser") or {}
-    if omni.get("scroll_dx") is not None or omni.get("scroll_dy") is not None:
-        return int(omni.get("scroll_dx") or 0), int(omni.get("scroll_dy") or 0)
-
-    detail = (item.get("events") or [{}])[0].get("detail") or ""
-    dx = dy = 0
-    for part in detail.split(","):
-        key, _, value = part.strip().partition("=")
-        try:
-            if key.strip() == "dx":
-                dx = int(float(value))
-            elif key.strip() == "dy":
-                dy = int(float(value))
-        except ValueError:
-            continue
-    return dx, dy
+def _scroll_notches(item: dict[str, Any]) -> tuple[float, float]:
+    from Accesibilitytree.Scrolling import scroll_delta
+    return scroll_delta(item)
 
 
 def _scroll_direction_fallback(value: str) -> tuple[int, int]:
@@ -235,6 +220,7 @@ def normalize_timeline(
                         and str(nxt.get("value") or "").strip().casefold()
                         == value
                         and isinstance(nxt_event, dict)
+                        and nxt_event.get("screen") == event.get("screen")
                         and (nxt_event.get("x"), nxt_event.get("y")) == anchor
                     )
                     if not same:
