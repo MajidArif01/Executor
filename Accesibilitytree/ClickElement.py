@@ -122,6 +122,14 @@ _LABEL_TYPES = {"textcontrol", "imagecontrol"}
 # (menu shadows / borders can stick out a few pixels).
 _OVERLAY_TOLERANCE = 16
 
+# A visible ToolTipControl near the click is the surviving spatial clue when
+# UIA zeros out the anchor's bounding rect while the tooltip is open (common
+# with Win11 Control Center footer buttons). Tooltips sit roughly a line-height
+# above / beside their anchor, so ~80 physical pixels of slack is enough at
+# standard DPI. Raise it for very high-DPI captures.
+TOOLTIP_TYPE = "tooltipcontrol"
+TOOLTIP_PROXIMITY_PX = 80
+
 
 def _is_overlay(node: dict) -> bool:
     ct = _p(node, "type").lower()
@@ -230,6 +238,91 @@ def _walk(node, x, y, depth, chain, overlay_bounds, out, counter):
 
 
 # ============================================================
+# TOOLTIP FALLBACK — recover anchors whose rect UIA has zeroed out
+# ============================================================
+#
+# When Windows shows a tooltip over a control, the UIA snapshot sometimes
+# reports the anchor control (and its whole subtree) with bounding rect
+# (0,0,0,0) and is_offscreen=true, even though it is visually on screen.
+# The ToolTipControl itself is still captured with a correct rect, named
+# after the control it describes. We use that as a positional fallback when
+# the geometric hit is only a generic container.
+
+def collect_tooltips(tree):
+    """Return [(name, rect), ...] for every visible, named ToolTipControl."""
+    out = []
+
+    def walk(node):
+        if not isinstance(node, dict):
+            return
+        if _p(node, "type").lower() == TOOLTIP_TYPE and not node.get("is_offscreen"):
+            name = _p(node, "name")
+            rect = _get_rect(node)
+            if name and _valid_rect(rect):
+                out.append((name, rect))
+        for child in _get_children(node):
+            walk(child)
+
+    walk(tree)
+    return out
+
+
+def find_actionable_chain_by_name(root, name):
+    """DFS for the first actionable node whose name matches `name`."""
+    def walk(node, chain):
+        if not isinstance(node, dict):
+            return None
+        current = chain + [node]
+        if (_p(node, "type").lower() in _ACTIONABLE_TYPES
+                and _p(node, "name") == name):
+            return current
+        for child in _get_children(node):
+            found = walk(child, current)
+            if found:
+                return found
+        return None
+
+    return walk(root, [])
+
+
+def rect_near_point(rect, x, y, slack):
+    """True if (x, y) is within `slack` px of `rect` (0 distance if inside)."""
+    l, t, r, b = rect
+    dx = max(l - x, 0, x - r)
+    dy = max(t - y, 0, y - b)
+    return dx * dx + dy * dy <= slack * slack
+
+
+def promote_via_tooltip(hit, root, x, y):
+    """
+    If the current hit is a non-actionable, non-label container, promote it to
+    the actionable element described by a nearby ToolTipControl. Leaves clean
+    geometric hits (real buttons, labels inside them) untouched.
+    """
+    target_type = _p(hit["element"], "type").lower()
+    if target_type in _ACTIONABLE_TYPES or target_type in _LABEL_TYPES:
+        return hit
+
+    hit_name = _p(hit["element"], "name")
+    for name, rect in collect_tooltips(root):
+        if name == hit_name:
+            continue  # a container echoing its own tooltip name is not a promotion
+        if not rect_near_point(rect, x, y, TOOLTIP_PROXIMITY_PX):
+            continue
+        # Prefer promotion into the geometric hit's own subtree, fall back to
+        # the whole tree. Keeps ambiguous names (two "Open" buttons) sane.
+        chain = (find_actionable_chain_by_name(hit["element"], name)
+                 or find_actionable_chain_by_name(root, name))
+        if chain:
+            return {
+                "element": chain[-1],
+                "parent_chain": chain,
+                "layer": "tooltip-inferred",
+            }
+    return hit
+
+
+# ============================================================
 # BUILD RESULT
 # ============================================================
 
@@ -307,6 +400,7 @@ def _locate(capture: dict, root: dict, x, y, click_space) -> Optional[dict]:
     hit = _hit_test(root, nx, ny)
     if not hit:
         return None
+    hit = promote_via_tooltip(hit, root, nx, ny)
     result = _build_result(hit)
     result["click"] = {"raw": [x, y], "normalized": [nx, ny]}
     return result
