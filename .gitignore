@@ -10,3 +10,5 @@ omniparser/weights/.cache/
 __pycache__/
 debug.ipynb
 wget-log
+.pytest_cache/
+.cursor/
