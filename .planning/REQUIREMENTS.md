@@ -126,18 +126,18 @@ Deferred to future milestone. Tracked but not in current roadmap.
 | EXEC-02 | Phase 3 | Pending |
 | EXEC-03 | Phase 3 | Pending |
 | EXEC-04 | Phase 3 | Pending |
-| AXLR-01 | Phase 3 | Pending |
-| AXLR-02 | Phase 3 | Pending |
-| AXLR-03 | Phase 3 | Pending |
-| PIPE-01 | Phase 4 | Pending |
-| PIPE-02 | Phase 4 | Pending |
-| PIPE-03 | Phase 4 | Pending |
-| PKGS-01 | Phase 4 | Pending |
-| PKGS-02 | Phase 4 | Pending |
-| PKGS-03 | Phase 4 | Pending |
-| STAT-01 | Phase 4 | Pending |
-| STAT-02 | Phase 4 | Pending |
-| STAT-03 | Phase 4 | Pending |
+| AXLR-01 | Phase 4 | Pending |
+| AXLR-02 | Phase 4 | Pending |
+| AXLR-03 | Phase 4 | Pending |
+| PIPE-01 | Phase 5 | Pending |
+| PIPE-02 | Phase 5 | Pending |
+| PIPE-03 | Phase 5 | Pending |
+| PKGS-01 | Phase 5 | Pending |
+| PKGS-02 | Phase 5 | Pending |
+| PKGS-03 | Phase 5 | Pending |
+| STAT-01 | Phase 5 | Pending |
+| STAT-02 | Phase 5 | Pending |
+| STAT-03 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 35 total
