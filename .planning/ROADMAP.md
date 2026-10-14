@@ -25,7 +25,16 @@ Incremental SOLID refactor of a Windows UI automation and replay system. Safety 
   3. Recording fakes let a test assert the exact ordered action calls an executor makes
   4. Every legacy module imports without side effects or errors (import smoke test passes)
   5. Each duplicate file has one canonical copy and `DataMapper.py/` is a valid package name
-**Plans**: TBD
+**Plans**: 8 plans
+Plans:
+- [ ] 01-01-PLAN.md - Commit working tree baseline, update .gitignore
+- [ ] 01-02-PLAN.md - Resolve duplicates, pending deletions, DataMapper.py/ (checkpoint)
+- [ ] 01-03-PLAN.md - pytest infra, dev deps, desktop marker, fakes and fixtures
+- [ ] 01-04-PLAN.md - Normalizer snapshots, validator tests, JSON round trip
+- [ ] 01-05-PLAN.md - NaiveExecutor recording-fake and dry-run tests
+- [ ] 01-06-PLAN.md - mousemapper and node.py golden tests
+- [ ] 01-07-PLAN.md - click_content golden tests
+- [ ] 01-08-PLAN.md - Import smoke test and __main__ guard verification
 
 ### Phase 2: Domain Types and Ports
 **Goal**: Pure domain types and narrow ports exist so core logic can run with no desktop libraries
