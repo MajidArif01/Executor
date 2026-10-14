@@ -280,14 +280,14 @@ def test_calc_calls(sample, snapshot, monkeypatch):
 | A5 | `time.sleep` monkeypatch works for both modules | Code Examples | medium; verify in Wave 0 |
 | A6 | `__getattr__` fake covers every backend method the 4 samples hit | Code Examples | low; run once to see |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Is `DataMapper.py/` intentional (STATE.md blocker)?**
+1. **Is `DataMapper.py/` intentional (STATE.md blocker)?** RESOLVED — Plan 01-02 checkpoint asks user to confirm dissolution (recommended) or literal rename. Both paths are handled.
    - Known: only an older duplicate `mousemapper.py` plus a stray AX json; nothing imports it; the name can never be a package (`DataMapper.py` is not a valid module path).
    - Recommendation: dissolve it (delete stale copy, `git mv` the json to `tests/fixtures/ax/` or delete it). HYGN-02 literally says "renamed"; if the user wants a literal rename, use `data_mapper/` with an `__init__.py` holding the json, but that creates a package with no code. Get a one-line confirmation in the plan's checkpoint.
-2. **`automate_ax_click_matcher.py` depends on a nonexistent `Ax_click_matcher.py`.** Options: commit as-is and xfail (recommended; Phase 1 does no restructuring) or ask the user whether the matcher file was lost. Do not delete without confirmation.
-3. **`Data_ingetion/keyboard_data.py` bare import.** Same treatment: xfail in smoke test now; fixing the import is a content change deferred to a later phase.
-4. **Do any external scripts import legacy module names?** Unknown (STATE.md); not answerable from the repo.
+2. **`automate_ax_click_matcher.py` depends on a nonexistent `Ax_click_matcher.py`.** RESOLVED — committed as-is and marked strict xfail in Plan 01-08 smoke test. No deletion without user confirmation.
+3. **`Data_ingetion/keyboard_data.py` bare import.** RESOLVED — strict xfail in Plan 01-08 smoke test; fixing deferred to later phase.
+4. **Do any external scripts import legacy module names?** RESOLVED — accepted as unknowable from the repo; re-export shims planned for Phase 5 (PKGS-02) mitigate the risk.
 
 ## Environment Availability
 
